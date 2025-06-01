@@ -2,69 +2,72 @@
 <html>
 <head>
   <title>Application Security - Windows Security</title>
-  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <nav>
-    <a href="index.html">Home</a> |
-    <a href="cloud_services.html">Cloud Services</a> |
-    <a href="identity.html">Identity</a> |
-    <a href="application.html">Application</a> |
-    <a href="operating_system.html">Operating System</a> |
-    <a href="hardware.html">Hardware</a> |
-    <a href="security_foundation.html">Security Foundation</a> |
-    <a href="resources.html">Resources</a>
+<body class="bg-gray-100 text-gray-900">
+  <nav class="bg-gray-800 p-4">
+    <div class="container mx-auto flex flex-wrap justify-center">
+      <a href="index.html" class="text-white mx-2 px-3 py-2 hover:bg-gray-700 hover:rounded block md:inline-block">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-home inline-block w-5 h-5 mr-1 align-text-bottom"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Home</a>
+      <a href="cloud_services.html" class="text-white mx-2 px-3 py-2 hover:bg-gray-700 hover:rounded block md:inline-block">Cloud Services</a>
+      <a href="identity.html" class="text-white mx-2 px-3 py-2 hover:bg-gray-700 hover:rounded block md:inline-block">Identity</a>
+      <a href="application.html" class="text-white mx-2 px-3 py-2 hover:bg-gray-700 hover:rounded block md:inline-block">Application</a>
+      <a href="operating_system.html" class="text-white mx-2 px-3 py-2 hover:bg-gray-700 hover:rounded block md:inline-block">Operating System</a>
+      <a href="hardware.html" class="text-white mx-2 px-3 py-2 hover:bg-gray-700 hover:rounded block md:inline-block">Hardware</a>
+      <a href="security_foundation.html" class="text-white mx-2 px-3 py-2 hover:bg-gray-700 hover:rounded block md:inline-block">Security Foundation</a>
+      <a href="resources.html" class="text-white mx-2 px-3 py-2 hover:bg-gray-700 hover:rounded block md:inline-block">Resources</a>
+    </div>
   </nav>
-  <div class="container">
+  <div class="container mx-auto max-w-4xl p-6">
     <main>
-      <h1>Application Security</h1>
+      <h1 class="text-3xl font-bold mb-4">Application Security</h1>
 
-      <h2>Application and driver control</h2>
-      <ul>
-        <li>
-          <h3>Smart App Control</h3>
-          <p>Information about Smart App Control will be available here.</p>
+      <h2 class="text-2xl font-bold mb-4">Application and driver control</h2>
+      <ul class="list-disc pl-5 space-y-2 mb-4">
+        <li class="mb-2">
+          <h3 class="text-xl font-bold mb-3">Smart App Control</h3>
+          <p class="mb-4">Information about Smart App Control will be available here.</p>
         </li>
-        <li>
-          <h3>App control policies</h3>
-          <p><strong>AppLocker</strong> is a feature in Windows that helps administrators control which applications and files users can run on a system. By creating rules based on file attributes like publisher, product name, file name, or file hash, AppLocker can prevent unwanted or unauthorized software from executing. This is a powerful tool in preventing malware infections (as many malicious programs will be blocked from running) and ensuring that only approved applications are used within an organization, thereby enhancing overall system security and compliance.</p>
-          <p>AppLocker rules can be configured for different users and groups, providing granular control over application usage.</p>
+        <li class="mb-2">
+          <h3 class="text-xl font-bold mb-3">App control policies</h3>
+          <p class="mb-4"><strong>AppLocker</strong> is a feature in Windows that helps administrators control which applications and files users can run on a system. By creating rules based on file attributes like publisher, product name, file name, or file hash, AppLocker can prevent unwanted or unauthorized software from executing. This is a powerful tool in preventing malware infections (as many malicious programs will be blocked from running) and ensuring that only approved applications are used within an organization, thereby enhancing overall system security and compliance.</p>
+          <p class="mb-4">AppLocker rules can be configured for different users and groups, providing granular control over application usage.</p>
         </li>
-        <li>
-          <h3>Browser protection</h3>
-          <p>Information about Browser protection will be available here. This includes features that help protect against potentially unwanted apps, files, malicious sites, and downloads, often managed via the Windows Security app.</p>
+        <li class="mb-2">
+          <h3 class="text-xl font-bold mb-3">Browser protection</h3>
+          <p class="mb-4">Information about Browser protection will be available here. This includes features that help protect against potentially unwanted apps, files, malicious sites, and downloads, often managed via the Windows Security app.</p>
         </li>
-        <li>
-          <h3>Microsoft vulnerable driver block</h3>
-          <p>Information about Microsoft vulnerable driver block will be available here.</p>
+        <li class="mb-2">
+          <h3 class="text-xl font-bold mb-3">Microsoft vulnerable driver block</h3>
+          <p class="mb-4">Information about Microsoft vulnerable driver block will be available here.</p>
         </li>
-        <li>
-          <h3>Trusted Signing</h3>
-          <p>Information about Trusted Signing will be available here.</p>
+        <li class="mb-2">
+          <h3 class="text-xl font-bold mb-3">Trusted Signing</h3>
+          <p class="mb-4">Information about Trusted Signing will be available here.</p>
         </li>
       </ul>
 
-      <h2>Application isolation</h2>
-      <ul>
-        <li>
-          <h3>WSL App isolation</h3>
-          <p>Information about WSL App isolation will be available here.</p>
+      <h2 class="text-2xl font-bold mb-4">Application isolation</h2>
+      <ul class="list-disc pl-5 space-y-2 mb-4">
+        <li class="mb-2">
+          <h3 class="text-xl font-bold mb-3">WSL App isolation</h3>
+          <p class="mb-4">Information about WSL App isolation will be available here.</p>
         </li>
-        <li>
-          <h3>Microsoft Defender Application Guard</h3>
-          <p>Information about Microsoft Defender Application Guard will be available here. This technology helps isolate untrusted sites and files to protect the system.</p>
+        <li class="mb-2">
+          <h3 class="text-xl font-bold mb-3">Microsoft Defender Application Guard</h3>
+          <p class="mb-4">Information about Microsoft Defender Application Guard will be available here. This technology helps isolate untrusted sites and files to protect the system.</p>
         </li>
-        <li>
-          <h3>Windows Sandbox</h3>
-          <p>Information about Windows Sandbox will be available here.</p>
+        <li class="mb-2">
+          <h3 class="text-xl font-bold mb-3">Windows Sandbox</h3>
+          <p class="mb-4">Information about Windows Sandbox will be available here.</p>
         </li>
-        <li>
-          <h3>Windows Subsystem for Linux (WSL)</h3>
-          <p>Information about Windows Subsystem for Linux (WSL) will be available here.</p>
+        <li class="mb-2">
+          <h3 class="text-xl font-bold mb-3">Windows Subsystem for Linux (WSL)</h3>
+          <p class="mb-4">Information about Windows Subsystem for Linux (WSL) will be available here.</p>
         </li>
-        <li>
-          <h3>Virtualization-based integrity (VBI)</h3>
-          <p>Information about Virtualization-based integrity (VBI) will be available here.</p>
+        <li class="mb-2">
+          <h3 class="text-xl font-bold mb-3">Virtualization-based integrity (VBI)</h3>
+          <p class="mb-4">Information about Virtualization-based integrity (VBI) will be available here.</p>
         </li>
       </ul>
     </main>
