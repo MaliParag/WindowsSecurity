@@ -1,0 +1,34 @@
+/* Add any global styles or overrides here if needed */
+
+/* Styling for the timeline year header */
+.year-header {
+    transition: color 0.3s ease;
+}
+
+/* Styling for the vulnerability title */
+.vulnerability-title {
+    transition: color 0.3s ease;
+}
+
+/* Ensure the summary is not displayed by default via CSS as a fallback, JS will toggle it */
+.vulnerability-summary.hidden {
+    display: none;
+}
+
+/* Add a little more spacing for readability if multiple summaries are open */
+.vulnerability-summary:not(.hidden) + .vulnerability-summary:not(.hidden) {
+    margin-top: 0.5rem;
+}
+
+/* Basic responsive adjustments */
+@media (max-width: 768px) {
+    #timeline-container h1 {
+        font-size: 2rem; /* Adjust title size for smaller screens */
+    }
+    .year-header {
+        font-size: 1.5rem; /* Adjust year header size */
+    }
+    .vulnerability-title {
+        font-size: 1rem; /* Adjust vulnerability title size */
+    }
+}
