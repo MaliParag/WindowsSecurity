@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function fetchData() {
         try {
-            const response = await fetch('vulnerabilities.json');
+            const response = await fetch('timeline.json');
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
