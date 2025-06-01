@@ -19,57 +19,73 @@
     </div>
   </nav>
   <div class="container mx-auto max-w-4xl p-6">
+    <nav class="text-sm font-medium mb-4" aria-label="Breadcrumb">
+      <ol class="list-none p-0 inline-flex">
+        <li class="flex items-center">
+          <a href="index.html" class="text-gray-500 hover:text-gray-700">Home</a>
+          <svg class="fill-current w-3 h-3 mx-3 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"/></svg>
+        </li>
+        <li class="flex items-center">
+          <span class="text-gray-700">Application Security</span>
+        </li>
+      </ol>
+    </nav>
     <main>
-      <h1 class="text-3xl font-bold mb-4">Application Security</h1>
+      <h1 class="text-3xl font-bold mb-6">Application Security</h1>
+      <p class="text-lg mb-6">Explore the various topics related to Application Security:</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
 
-      <h2 class="text-2xl font-bold mb-4">Application and driver control</h2>
-      <ul class="list-disc pl-5 space-y-2 mb-4">
-        <li class="mb-2">
-          <h3 class="text-xl font-bold mb-3">Smart App Control</h3>
-          <p class="mb-4">Information about Smart App Control will be available here.</p>
-        </li>
-        <li class="mb-2">
-          <h3 class="text-xl font-bold mb-3">App control policies</h3>
-          <p class="mb-4"><strong>AppLocker</strong> is a feature in Windows that helps administrators control which applications and files users can run on a system. By creating rules based on file attributes like publisher, product name, file name, or file hash, AppLocker can prevent unwanted or unauthorized software from executing. This is a powerful tool in preventing malware infections (as many malicious programs will be blocked from running) and ensuring that only approved applications are used within an organization, thereby enhancing overall system security and compliance.</p>
-          <p class="mb-4">AppLocker rules can be configured for different users and groups, providing granular control over application usage.</p>
-        </li>
-        <li class="mb-2">
-          <h3 class="text-xl font-bold mb-3">Browser protection</h3>
-          <p class="mb-4">Information about Browser protection will be available here. This includes features that help protect against potentially unwanted apps, files, malicious sites, and downloads, often managed via the Windows Security app.</p>
-        </li>
-        <li class="mb-2">
-          <h3 class="text-xl font-bold mb-3">Microsoft vulnerable driver block</h3>
-          <p class="mb-4">Information about Microsoft vulnerable driver block will be available here.</p>
-        </li>
-        <li class="mb-2">
-          <h3 class="text-xl font-bold mb-3">Trusted Signing</h3>
-          <p class="mb-4">Information about Trusted Signing will be available here.</p>
-        </li>
-      </ul>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+          <h2 class="text-xl font-semibold mb-2">Applocker</h2>
+          <a href="posts/application_applocker.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+        </div>
 
-      <h2 class="text-2xl font-bold mb-4">Application isolation</h2>
-      <ul class="list-disc pl-5 space-y-2 mb-4">
-        <li class="mb-2">
-          <h3 class="text-xl font-bold mb-3">WSL App isolation</h3>
-          <p class="mb-4">Information about WSL App isolation will be available here.</p>
-        </li>
-        <li class="mb-2">
-          <h3 class="text-xl font-bold mb-3">Microsoft Defender Application Guard</h3>
-          <p class="mb-4">Information about Microsoft Defender Application Guard will be available here. This technology helps isolate untrusted sites and files to protect the system.</p>
-        </li>
-        <li class="mb-2">
-          <h3 class="text-xl font-bold mb-3">Windows Sandbox</h3>
-          <p class="mb-4">Information about Windows Sandbox will be available here.</p>
-        </li>
-        <li class="mb-2">
-          <h3 class="text-xl font-bold mb-3">Windows Subsystem for Linux (WSL)</h3>
-          <p class="mb-4">Information about Windows Subsystem for Linux (WSL) will be available here.</p>
-        </li>
-        <li class="mb-2">
-          <h3 class="text-xl font-bold mb-3">Virtualization-based integrity (VBI)</h3>
-          <p class="mb-4">Information about Virtualization-based integrity (VBI) will be available here.</p>
-        </li>
-      </ul>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+          <h2 class="text-xl font-semibold mb-2">Browser Protection</h2>
+          <a href="posts/application_browser_protection.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+          <h2 class="text-xl font-semibold mb-2">Microsoft Defender Application Guard</h2>
+          <a href="posts/application_microsoft_defender_application_guard.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+          <h2 class="text-xl font-semibold mb-2">Microsoft Vulnerable Driver Block</h2>
+          <a href="posts/application_microsoft_vulnerable_driver_block.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+          <h2 class="text-xl font-semibold mb-2">Smart App Control</h2>
+          <a href="posts/application_smart_app_control.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+          <h2 class="text-xl font-semibold mb-2">Trusted Signing</h2>
+          <a href="posts/application_trusted_signing.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+          <h2 class="text-xl font-semibold mb-2">Virtualization Based Integrity (VBI)</h2>
+          <a href="posts/application_virtualization_based_integrity_vbi.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+          <h2 class="text-xl font-semibold mb-2">Windows Sandbox</h2>
+          <a href="posts/application_windows_sandbox.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+          <h2 class="text-xl font-semibold mb-2">Windows Subsystem For Linux (WSL)</h2>
+          <a href="posts/application_windows_subsystem_for_linux_wsl.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+          <h2 class="text-xl font-semibold mb-2">WSL App Isolation</h2>
+          <a href="posts/application_wsl_app_isolation.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+        </div>
+
+      </div>
     </main>
   </div>
 </body>
