@@ -1,37 +1,163 @@
 [
   {
-    "id": "CVE-2023-12345",
-    "year": 2023,
-    "title": "Remote Code Execution Vulnerability",
-    "summary": "A critical vulnerability allowing remote code execution via a crafted request.",
-    "details_url": "https://example.com/cve-2023-12345"
+    "id": "MS08-067",
+    "year": 2008,
+    "title": "Conficker Worm (Server Service Vulnerability)",
+    "summary": "A critical vulnerability in the Server Service (SVCHOST.EXE) on Windows systems that allowed remote code execution without authentication. Exploited by the Conficker worm, which infected millions of computers worldwide.",
+    "details_url": "https://learn.microsoft.com/en-us/security-updates/securitybulletins/2008/ms08-067"
   },
   {
-    "id": "CVE-2023-67890",
-    "year": 2023,
-    "title": "Privilege Escalation Flaw",
-    "summary": "An attacker can escalate privileges to administrator level due to improper input validation.",
-    "details_url": "https://example.com/cve-2023-67890"
+    "id": "TRUSTWORTHY-COMPUTING",
+    "year": 2002,
+    "title": "Bill Gates' Trustworthy Computing Memo",
+    "summary": "A pivotal internal memo from Bill Gates that paused all new feature development at Microsoft to focus entirely on security, privacy, and reliability. This initiated a fundamental shift in Microsoft's engineering culture and laid the groundwork for future security initiatives like the SDL.",
+    "details_url": "https://news.microsoft.com/2012/01/12/at-10-year-milestone-microsofts-trustworthy-computing-initiative-more-important-than-ever/"
   },
   {
-    "id": "CVE-2022-24680",
-    "year": 2022,
-    "title": "Cross-Site Scripting (XSS)",
-    "summary": "A persistent XSS vulnerability allows attackers to inject malicious scripts into web pages.",
-    "details_url": "https://example.com/cve-2022-24680"
+    "id": "SDL-INITIATION",
+    "year": 2004,
+    "title": "Security Development Lifecycle (SDL) Formalization",
+    "summary": "Building on Trustworthy Computing, Microsoft formalized and mandated the Security Development Lifecycle (SDL) across all its product teams. The SDL is a process that integrates security activities and requirements into every phase of the software development process, significantly reducing vulnerabilities before products ship.",
+    "details_url": "https://www.microsoft.com/en-us/securityengineering/sdl"
   },
   {
-    "id": "CVE-2022-13579",
-    "year": 2022,
-    "title": "Denial of Service",
-    "summary": "A vulnerability that can lead to denial of service when processing large files.",
-    "details_url": "https://example.com/cve-2022-13579"
+    "id": "PATCH-TUESDAY",
+    "year": 2003,
+    "title": "Establishment of Patch Tuesday",
+    "summary": "Microsoft standardized its security update release schedule to the second Tuesday of each month, known as 'Patch Tuesday.' This provided predictability for IT administrators and users, enabling more consistent patching and reducing the window of vulnerability for known flaws across Windows systems worldwide.",
+    "details_url": "https://learn.microsoft.com/en-us/windows/deployment/update/release-cycle"
   },
   {
-    "id": "CVE-2021-54321",
+    "id": "UAC-INTRODUCTION",
+    "year": 2006,
+    "title": "Windows Vista: User Account Control (UAC)",
+    "summary": "Windows Vista introduced User Account Control (UAC), a core security feature designed to mitigate the impact of malware by requiring administrative consent for privileged operations. While initially controversial for its frequent prompts, UAC fundamentally changed how users interact with elevated permissions on Windows.",
+    "details_url": "https://www.cnet.com/pictures/windows-security-highlights-through-the-years-images/"
+  },
+  {
+    "id": "WINDOWS-DEFENDER-EVOLUTION",
+    "year": 2006,
+    "title": "Evolution of Windows Defender (Built-in AV)",
+    "summary": "Initially an anti-spyware tool, Windows Defender (now Microsoft Defender Antivirus) evolved into a full-fledged, built-in antivirus solution with Windows 8. Its integration provides a baseline level of protection for all Windows users, significantly impacting the overall security posture of the ecosystem.",
+    "details_url": "https://answers.microsoft.com/en-us/windows/forum/all/history-of-windows-antivirus/bacd60c9-d4f4-4560-b090-4272d8bf396e"
+  },
+  {
+    "id": "CVE-2017-0144",
+    "year": 2017,
+    "title": "EternalBlue (SMB Vulnerability)",
+    "summary": "A critical remote code execution vulnerability in Microsoft's Server Message Block (SMB) protocol. Famously exploited by the WannaCry and NotPetya ransomware attacks, which caused widespread disruption globally.",
+    "details_url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2017-0144"
+  },
+  {
+    "id": "CVE-2017-11882",
+    "year": 2017,
+    "title": "Microsoft Office Memory Corruption Vulnerability",
+    "summary": "A memory corruption vulnerability in Microsoft Office's Equation Editor that allowed remote code execution. Widely exploited by various threat actors, including those associated with state-sponsored attacks.",
+    "details_url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2017-11882"
+  },
+  {
+    "id": "CVE-2019-0708",
+    "year": 2019,
+    "title": "BlueKeep (Remote Desktop Services Vulnerability)",
+    "summary": "A critical remote code execution vulnerability in Microsoft's Remote Desktop Services (RDS) that is 'wormable,' meaning it could spread like WannaCry. Prompted strong warnings from security agencies.",
+    "details_url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2019-0708"
+  },
+  {
+    "id": "CVE-2020-0796",
+    "year": 2020,
+    "title": "SMBGhost/CoronaBug (SMBv3 Compression Vulnerability)",
+    "summary": "A critical remote code execution vulnerability in the Microsoft Server Message Block 3.1.1 (SMBv3) protocol's compression feature. Exploited by various threat actors, though not as widely as EternalBlue.",
+    "details_url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2020-0796"
+  },
+  {
+    "id": "SOLARWINDS-SUPPLY-CHAIN",
+    "year": 2020,
+    "title": "SolarWinds Supply Chain Attack (SUNBURST)",
+    "summary": "A sophisticated supply chain attack, attributed to Russian state-sponsored actors (often linked to Nobelium/APT29), that compromised SolarWinds Orion software updates. This led to backdoors on thousands of customer networks, including numerous U.S. government agencies and private companies heavily reliant on Windows infrastructure, enabling extensive espionage.",
+    "details_url": "https://www.cisa.gov/news-events/alerts/2020/12/13/active-exploitation-solarwinds-orion-products"
+  },
+  {
+    "id": "CVE-2021-44228",
     "year": 2021,
-    "title": "SQL Injection Vulnerability",
-    "summary": "Sensitive data exposure due to an SQL injection vulnerability in the user login form.",
-    "details_url": "https://example.com/cve-2021-54321"
+    "title": "Log4Shell (Apache Log4j Remote Code Execution)",
+    "summary": "A severe zero-day vulnerability in the Apache Log4j logging library, allowing unauthenticated remote code execution. While not a Windows-specific flaw, its widespread use in Java applications running on Windows servers made it a massive threat, leading to global scanning and exploitation attempts.",
+    "details_url": "https://www.cve.org/CVERecord?id=CVE-2021-44228"
+  },
+  {
+    "id": "CVE-2021-26855",
+    "year": 2021,
+    "title": "ProxyLogon (Microsoft Exchange Server Vulnerabilities)",
+    "summary": "One of a set of critical pre-authentication vulnerabilities in Microsoft Exchange Server that allowed remote code execution and server compromise. Exploited by state-sponsored groups and other attackers worldwide.",
+    "details_url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-26855"
+  },
+  {
+    "id": "CVE-2021-34473",
+    "year": 2021,
+    "title": "PrintNightmare (Windows Print Spooler Vulnerability)",
+    "summary": "A critical remote code execution vulnerability in the Windows Print Spooler service that allowed attackers to execute arbitrary code with SYSTEM privileges. Widely exploited by various threat actors.",
+    "details_url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-34473"
+  },
+  {
+    "id": "SHIFT-TO-CLOUD-SECURITY",
+    "year": 2010,
+    "title": "Shift to Cloud Security & Azure",
+    "summary": "With the rise of cloud computing and the launch of Azure, Microsoft's security strategy increasingly focused on protecting cloud services and hybrid environments. This involved new security models like Zero Trust and a stronger emphasis on identity and data protection across distributed systems.",
+    "details_url": "https://www.microsoft.com/insidetrack/blog/digitally-transforming-microsoft-our-it-journey/"
+  },
+  {
+    "id": "CVE-2022-30190",
+    "year": 2022,
+    "title": "Follina (Microsoft Support Diagnostic Tool Vulnerability)",
+    "summary": "A remote code execution vulnerability in the Microsoft Support Diagnostic Tool (MSDT) that could be triggered via a crafted Word document. Actively exploited in the wild before a patch was released.",
+    "details_url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-30190"
+  },
+  {
+    "id": "STORM-0558",
+    "year": 2023,
+    "title": "Storm-0558 (Microsoft Exchange Online Breach)",
+    "summary": "A China-based threat actor (Storm-0558) exploited a stolen Microsoft account (MSA) consumer signing key to forge authentication tokens, gaining unauthorized access to email accounts in Exchange Online, including those of U.S. government officials. This highlighted a significant lapse in Microsoft's internal security practices.",
+    "details_url": "https://msrc.microsoft.com/blog/2023/07/analysis-of-storm-0558-techniques-for-unauthorized-email-access/"
+  },
+  {
+    "id": "CVE-2023-21715",
+    "year": 2023,
+    "title": "Microsoft Office Security Feature Bypass Vulnerability",
+    "summary": "A vulnerability in Microsoft Office that could allow an attacker to bypass Protected View. While not directly RCE, it was significant as it could be chained with other vulnerabilities.",
+    "details_url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-21715"
+  },
+  {
+    "id": "CVE-2023-35618",
+    "year": 2023,
+    "title": "Microsoft Outlook Remote Code Execution Vulnerability",
+    "summary": "A critical vulnerability in Microsoft Outlook that could allow for remote code execution by sending a specially crafted email. This vulnerability could be triggered even without user interaction (zero-click).",
+    "details_url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-35618"
+  },
+  {
+    "id": "SECURE-FUTURE-INITIATIVE",
+    "year": 2023,
+    "title": "Secure Future Initiative (SFI) Launch",
+    "summary": "Following recent breaches and increased scrutiny, Microsoft launched the Secure Future Initiative (SFI), a comprehensive strategy to enhance security by design and default, with a focus on adopting memory-safe languages, improving engineering systems, and increasing transparency.",
+    "details_url": "https://www.microsoft.com/en-us/security/blog/2024/05/03/security-above-all-else-expanding-microsofts-secure-future-initiative/"
+  },
+  {
+    "id": "MIDNIGHT-BLIZZARD-2024",
+    "year": 2024,
+    "title": "Midnight Blizzard (Nobelium) Attack on Microsoft",
+    "summary": "The Russian state-sponsored actor Midnight Blizzard (also known as Nobelium) gained access to Microsoft's corporate email systems, including senior leadership and cybersecurity teams, via a password spray attack against a legacy test tenant account. This resulted in the exfiltration of sensitive data.",
+    "details_url": "https://msrc.microsoft.com/blog/2024/01/25/midnight-blizzard-microsoft-organizational-email-compromise/"
+  },
+  {
+    "id": "2024-07-19-CrowdStrike-Outage",
+    "year": 2024,
+    "title": "CrowdStrike Falcon Sensor Update Outage",
+    "summary": "A faulty software update to CrowdStrike's Falcon Sensor security product caused widespread Blue Screen of Death (BSOD) errors and system crashes on Microsoft Windows machines globally, leading to massive IT outages across various industries. While not a cyberattack, its impact was historic in scale.",
+    "details_url": "https://en.wikipedia.org/wiki/2024_CrowdStrike-related_IT_outages"
+  },
+  {
+    "id": "CVE-2024-38063",
+    "year": 2024,
+    "title": "Windows TCP/IP Remote Code Execution Vulnerability",
+    "summary": "A critical remote code execution vulnerability affecting the Windows TCP/IP stack, allowing an unauthenticated attacker to execute arbitrary code on vulnerable systems. Considered highly exploitable.",
+    "details_url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-38063"
   }
 ]
