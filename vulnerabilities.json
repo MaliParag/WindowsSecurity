@@ -1,0 +1,37 @@
+[
+  {
+    "id": "CVE-2023-12345",
+    "year": 2023,
+    "title": "Remote Code Execution Vulnerability",
+    "summary": "A critical vulnerability allowing remote code execution via a crafted request.",
+    "details_url": "https://example.com/cve-2023-12345"
+  },
+  {
+    "id": "CVE-2023-67890",
+    "year": 2023,
+    "title": "Privilege Escalation Flaw",
+    "summary": "An attacker can escalate privileges to administrator level due to improper input validation.",
+    "details_url": "https://example.com/cve-2023-67890"
+  },
+  {
+    "id": "CVE-2022-24680",
+    "year": 2022,
+    "title": "Cross-Site Scripting (XSS)",
+    "summary": "A persistent XSS vulnerability allows attackers to inject malicious scripts into web pages.",
+    "details_url": "https://example.com/cve-2022-24680"
+  },
+  {
+    "id": "CVE-2022-13579",
+    "year": 2022,
+    "title": "Denial of Service",
+    "summary": "A vulnerability that can lead to denial of service when processing large files.",
+    "details_url": "https://example.com/cve-2022-13579"
+  },
+  {
+    "id": "CVE-2021-54321",
+    "year": 2021,
+    "title": "SQL Injection Vulnerability",
+    "summary": "Sensitive data exposure due to an SQL injection vulnerability in the user login form.",
+    "details_url": "https://example.com/cve-2021-54321"
+  }
+]
