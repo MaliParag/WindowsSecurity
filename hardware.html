@@ -19,32 +19,73 @@
     </div>
   </nav>
   <div class="container mx-auto max-w-4xl p-6">
+    <nav class="text-sm font-medium mb-4" aria-label="Breadcrumb">
+      <ol class="list-none p-0 inline-flex">
+        <li class="flex items-center">
+          <a href="index.html" class="text-gray-500 hover:text-gray-700">Home</a>
+          <svg class="fill-current w-3 h-3 mx-3 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"/></svg>
+        </li>
+        <li class="flex items-center">
+          <span class="text-gray-700">Hardware Security</span>
+        </li>
+      </ol>
+    </nav>
     <main>
-      <h1 class="text-3xl font-bold mb-4">Hardware Security</h1>
+      <h1 class="text-3xl font-bold mb-6">Hardware Security</h1>
+      <p class="text-lg mb-6">Explore the various topics related to Hardware Security:</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
 
-      <h2 class="text-2xl font-bold mb-4">Hardware root-of-trust</h2>
-      <ul class="list-disc pl-5 space-y-2 mb-4">
-        <li class="mb-2">
-          <h3 class="text-xl font-bold mb-3">Trusted Platform Module (TPM) 2.0</h3>
-          <p class="mb-4">Information about Trusted Platform Module (TPM) 2.0 will be available here. TPM is a critical hardware component for features like BitLocker Drive Encryption and enhancing overall system security by securely storing cryptographic keys.</p>
-        </li>
-        <li class="mb-2">
-          <h3 class="text-xl font-bold mb-3">Microsoft secure process protections</h3>
-          <p class="mb-4">Information about Microsoft secure process protections will be available here.</p>
-        </li>
-      </ul>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+          <h2 class="text-xl font-semibold mb-2">Configuration Lock</h2>
+          <a href="posts/hardware_configuration_lock.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+        </div>
 
-      <h2 class="text-2xl font-bold mb-4">Silicon-assisted security</h2>
-      <ul class="list-disc pl-5 space-y-2 mb-4">
-        <li class="mb-2"><h3 class="text-xl font-bold mb-3">Secure boot</h3><p class="mb-4">Information about Secure boot will be available here.</p></li>
-        <li class="mb-2"><h3 class="text-xl font-bold mb-3">Direct Memory Access (DMA) protection</h3><p class="mb-4">Information about Direct Memory Access (DMA) protection will be available here.</p></li>
-        <li class="mb-2"><h3 class="text-xl font-bold mb-3">Virtualization-based security (VBS)</h3><p class="mb-4">Information about Virtualization-based security (VBS) will be available here.</p></li>
-        <li class="mb-2"><h3 class="text-xl font-bold mb-3">Hypervisor-protected code integrity (HVCI)</h3><p class="mb-4">Information about Hypervisor-protected code integrity (HVCI) will be available here. This is also known as Memory Integrity.</p></li>
-        <li class="mb-2"><h3 class="text-xl font-bold mb-3">Hypervisor-enforced bug reporting (HEBR)</h3><p class="mb-4">Information about Hypervisor-enforced bug reporting (HEBR) will be available here.</p></li>
-        <li class="mb-2"><h3 class="text-xl font-bold mb-3">Hardware enforced stack protection</h3><p class="mb-4">Information about Hardware enforced stack protection will be available here.</p></li>
-        <li class="mb-2"><h3 class="text-xl font-bold mb-3">Kernel data memory entropy, DMA protection</h3><p class="mb-4">Information about Kernel data memory entropy and DMA protection will be available here.</p></li>
-        <li class="mb-2"><h3 class="text-xl font-bold mb-3">Configuration lock</h3><p class="mb-4">Information about Configuration lock will be available here.</p></li>
-      </ul>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+          <h2 class="text-xl font-semibold mb-2">Direct Memory Access (DMA) Protection</h2>
+          <a href="posts/hardware_direct_memory_access_dma_protection.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+          <h2 class="text-xl font-semibold mb-2">Hardware Enforced Stack Protection</h2>
+          <a href="posts/hardware_hardware_enforced_stack_protection.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+          <h2 class="text-xl font-semibold mb-2">Hypervisor Enforced Bug Reporting (HEBR)</h2>
+          <a href="posts/hardware_hypervisor_enforced_bug_reporting_hebr.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+          <h2 class="text-xl font-semibold mb-2">Hypervisor Protected Code Integrity (HVCI)</h2>
+          <a href="posts/hardware_hypervisor_protected_code_integrity_hvci.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+          <h2 class="text-xl font-semibold mb-2">Kernel Data Memory Entropy DMA Protection</h2>
+          <a href="posts/hardware_kernel_data_memory_entropy_dma_protection.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+          <h2 class="text-xl font-semibold mb-2">Microsoft Secure Process Protections</h2>
+          <a href="posts/hardware_microsoft_secure_process_protections.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+          <h2 class="text-xl font-semibold mb-2">Secure Boot</h2>
+          <a href="posts/hardware_secure_boot.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+          <h2 class="text-xl font-semibold mb-2">Trusted Platform Module (TPM) 2.0</h2>
+          <a href="posts/hardware_trusted_platform_module_tpm_2_0.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+          <h2 class="text-xl font-semibold mb-2">Virtualization Based Security (VBS)</h2>
+          <a href="posts/hardware_virtualization_based_security_vbs.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+        </div>
+
+      </div>
     </main>
   </div>
 </body>
