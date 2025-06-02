@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 listItem.appendChild(timePoint);
                 listItem.appendChild(title);
                 listItem.appendChild(summaryDiv); // Add summary div (initially hidden)
-                listItem.appendChild(learnMoreLink);
+                summaryDiv.appendChild(learnMoreLink); // Appended to summaryDiv
                 vulnerabilitiesList.appendChild(listItem);
             });
             yearSection.appendChild(vulnerabilitiesList);
