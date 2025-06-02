@@ -8,12 +8,12 @@ document.addEventListener('DOMContentLoaded', function () {
     return;
   }
 
-  searchToggleButton.addEventListener('click', function() {
-    searchInputContainer.classList.toggle('hidden');
-    if (!searchInputContainer.classList.contains('hidden')) {
-      searchInput.focus();
-    }
-  });
+  // searchToggleButton.addEventListener('click', function() {
+  //   searchInputContainer.classList.toggle('hidden');
+  //   if (!searchInputContainer.classList.contains('hidden')) {
+  //     searchInput.focus();
+  //   }
+  // });
 
   const searchableContent = Array.from(document.querySelectorAll('main h1, main h2, main p, main li, main td, main th, main span, main a'));
 
