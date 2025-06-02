@@ -19,7 +19,15 @@
         </svg>
     </button>
     <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-      <div class="relative mt-3 md:mt-0 md:ml-4">
+      <!-- Search Icon Button -->
+      <button type="button" id="search-toggle-button" class="p-2 text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 md:ml-4">
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+        </svg>
+        <span class="sr-only">Open search</span>
+      </button>
+      <!-- Search Input Container (initially hidden) -->
+      <div id="search-input-container" class="hidden relative mt-3 md:mt-0 md:ml-2">
         <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
           <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
@@ -29,19 +37,36 @@
       </div>
       <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
         <li>
-          <a href="index.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+          <a href="index.html" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
             <svg class="inline-block w-5 h-5 mr-1 align-text-bottom" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" /><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></svg>
             Home
           </a>
         </li>
-        <li><a href="cloud_services.html" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Cloud Services</a></li>
-        <li><a href="identity.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Identity</a></li>
-        <li><a href="application.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Application</a></li>
-        <li><a href="operating_system.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Operating System</a></li>
-        <li><a href="hardware.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Hardware</a></li>
-        <li><a href="security_foundation.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Security Foundation</a></li>
-        <li><a href="timeline.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Timeline</a></li>
-        <li><a href="resources.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Resources</a></li>
+        <li>
+          <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
+            Security Categories
+            <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+            </svg>
+          </button>
+          <!-- Dropdown menu -->
+          <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+              <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                <li><a href="cloud_services.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 text-blue-700 dark:text-blue-500 dark:hover:text-white" aria-current="page">Cloud Services</a></li>
+                <li><a href="identity.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Identity</a></li>
+                <li><a href="application.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Application</a></li>
+                <li><a href="operating_system.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Operating System</a></li>
+                <li><a href="hardware.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Hardware</a></li>
+                <li><a href="security_foundation.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Security Foundation</a></li>
+              </ul>
+          </div>
+        </li>
+        <li>
+          <a href="timeline.html" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Timeline</a>
+        </li>
+        <li>
+          <a href="resources.html" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Resources</a>
+        </li>
       </ul>
     </div>
   </div>
@@ -51,126 +76,126 @@
       <nav class="text-sm font-medium mb-4" aria-label="Breadcrumb">
         <ol class="list-none p-0 inline-flex">
           <li class="flex items-center">
-            <a href="index.html" class="text-gray-500 hover:text-gray-700">Home</a>
+            <a href="index.html" class="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400">Home</a>
             <svg class="fill-current w-3 h-3 mx-3 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"/></svg>
           </li>
           <li class="flex items-center">
-            <span class="text-gray-700">Cloud Services</span>
+            <span class="text-gray-700 dark:text-gray-400">Cloud Services</span>
           </li>
         </ol>
       </nav>
-      <h1 class="text-3xl font-bold mb-6">Cloud Services</h1>
+      <h1 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Cloud Services</h1>
 
       <section class="mb-10">
-        <h2 class="text-2xl font-semibold mb-4 border-b pb-2">Protect your work information</h2>
+        <h2 class="text-2xl font-semibold my-4 text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-700 pb-2">Protect your work information</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
-            <h3 class="text-xl font-semibold mb-2">Microsoft Entra ID</h3>
-            <a href="posts/cloud_services_microsoft_entra_id.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition-all duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
+            <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Microsoft Entra ID</h3>
+            <a href="posts/cloud_services_microsoft_entra_id.html" class="text-blue-600 dark:text-blue-500 hover:underline">Read more...</a>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
-            <h3 class="text-xl font-semibold mb-2">Microsoft Entra Private Access</h3>
-            <a href="posts/cloud_services_microsoft_entra_private_access.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition-all duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
+            <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Microsoft Entra Private Access</h3>
+            <a href="posts/cloud_services_microsoft_entra_private_access.html" class="text-blue-600 dark:text-blue-500 hover:underline">Read more...</a>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
-            <h3 class="text-xl font-semibold mb-2">Microsoft Entra Internet Access</h3>
-            <a href="posts/cloud_services_microsoft_entra_internet_access.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition-all duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
+            <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Microsoft Entra Internet Access</h3>
+            <a href="posts/cloud_services_microsoft_entra_internet_access.html" class="text-blue-600 dark:text-blue-500 hover:underline">Read more...</a>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
-            <h3 class="text-xl font-semibold mb-2">Azure Attestation Service</h3>
-            <a href="posts/cloud_services_azure_attestation_service.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition-all duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
+            <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Azure Attestation Service</h3>
+            <a href="posts/cloud_services_azure_attestation_service.html" class="text-blue-600 dark:text-blue-500 hover:underline">Read more...</a>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
-            <h3 class="text-xl font-semibold mb-2">Microsoft Defender for Endpoint</h3>
-            <a href="posts/cloud_services_microsoft_defender_for_endpoint.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition-all duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
+            <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Microsoft Defender for Endpoint</h3>
+            <a href="posts/cloud_services_microsoft_defender_for_endpoint.html" class="text-blue-600 dark:text-blue-500 hover:underline">Read more...</a>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
-            <h3 class="text-xl font-semibold mb-2">Cloud-native device management</h3>
-            <a href="posts/cloud_services_cloud_native_device_management.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition-all duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
+            <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Cloud-native device management</h3>
+            <a href="posts/cloud_services_cloud_native_device_management.html" class="text-blue-600 dark:text-blue-500 hover:underline">Read more...</a>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
-            <h3 class="text-xl font-semibold mb-2">Microsoft Intune</h3>
-            <a href="posts/cloud_services_microsoft_intune.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition-all duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
+            <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Microsoft Intune</h3>
+            <a href="posts/cloud_services_microsoft_intune.html" class="text-blue-600 dark:text-blue-500 hover:underline">Read more...</a>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
-            <h3 class="text-xl font-semibold mb-2">Windows enrollment attestation</h3>
-            <a href="posts/cloud_services_windows_enrollment_attestation.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition-all duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
+            <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Windows enrollment attestation</h3>
+            <a href="posts/cloud_services_windows_enrollment_attestation.html" class="text-blue-600 dark:text-blue-500 hover:underline">Read more...</a>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
-            <h3 class="text-xl font-semibold mb-2">Microsoft Cloud PKI</h3>
-            <a href="posts/cloud_services_microsoft_cloud_pki.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition-all duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
+            <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Microsoft Cloud PKI</h3>
+            <a href="posts/cloud_services_microsoft_cloud_pki.html" class="text-blue-600 dark:text-blue-500 hover:underline">Read more...</a>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
-            <h3 class="text-xl font-semibold mb-2">Enterprise Privilege Management (EPM)</h3>
-            <a href="posts/cloud_services_enterprise_privilege_management_epm.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition-all duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
+            <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Enterprise Privilege Management (EPM)</h3>
+            <a href="posts/cloud_services_enterprise_privilege_management_epm.html" class="text-blue-600 dark:text-blue-500 hover:underline">Read more...</a>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
-            <h3 class="text-xl font-semibold mb-2">Mobile Application Management (MDM)</h3>
-            <a href="posts/cloud_services_mobile_application_management_mdm.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition-all duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
+            <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Mobile Application Management (MDM)</h3>
+            <a href="posts/cloud_services_mobile_application_management_mdm.html" class="text-blue-600 dark:text-blue-500 hover:underline">Read more...</a>
           </div>
         </div>
       </section>
 
       <section class="mb-10">
-        <h2 class="text-2xl font-semibold mb-4 border-b pb-2">General Cloud Services</h2>
+        <h2 class="text-2xl font-semibold my-4 text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-700 pb-2">General Cloud Services</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
-            <h3 class="text-xl font-semibold mb-2">Security baselines</h3>
-            <a href="posts/cloud_services_security_baselines.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition-all duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
+            <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Security baselines</h3>
+            <a href="posts/cloud_services_security_baselines.html" class="text-blue-600 dark:text-blue-500 hover:underline">Read more...</a>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
-            <h3 class="text-xl font-semibold mb-2">Local Administrator Password Solution (LAPS)</h3>
-            <a href="posts/cloud_services_local_administrator_password_solution_laps.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition-all duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
+            <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Local Administrator Password Solution (LAPS)</h3>
+            <a href="posts/cloud_services_local_administrator_password_solution_laps.html" class="text-blue-600 dark:text-blue-500 hover:underline">Read more...</a>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
-            <h3 class="text-xl font-semibold mb-2">Windows Autopilot</h3>
-            <a href="posts/cloud_services_windows_autopilot.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition-all duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
+            <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Windows Autopilot</h3>
+            <a href="posts/cloud_services_windows_autopilot.html" class="text-blue-600 dark:text-blue-500 hover:underline">Read more...</a>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
-            <h3 class="text-xl font-semibold mb-2">Windows Update for Business</h3>
-            <a href="posts/cloud_services_windows_update_for_business.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition-all duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
+            <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Windows Update for Business</h3>
+            <a href="posts/cloud_services_windows_update_for_business.html" class="text-blue-600 dark:text-blue-500 hover:underline">Read more...</a>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
-            <h3 class="text-xl font-semibold mb-2">Windows Autopatch</h3>
-            <a href="posts/cloud_services_windows_autopatch.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition-all duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
+            <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Windows Autopatch</h3>
+            <a href="posts/cloud_services_windows_autopatch.html" class="text-blue-600 dark:text-blue-500 hover:underline">Read more...</a>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
-            <h3 class="text-xl font-semibold mb-2">Windows Hotpatch</h3>
-            <a href="posts/cloud_services_windows_hotpatch.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition-all duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
+            <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Windows Hotpatch</h3>
+            <a href="posts/cloud_services_windows_hotpatch.html" class="text-blue-600 dark:text-blue-500 hover:underline">Read more...</a>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
-            <h3 class="text-xl font-semibold mb-2">OneDrive for work or school</h3>
-            <a href="posts/cloud_services_onedrive_for_work_or_school.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition-all duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
+            <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">OneDrive for work or school</h3>
+            <a href="posts/cloud_services_onedrive_for_work_or_school.html" class="text-blue-600 dark:text-blue-500 hover:underline">Read more...</a>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
-            <h3 class="text-xl font-semibold mb-2">Universal Print</h3>
-            <a href="posts/cloud_services_universal_print.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition-all duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
+            <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Universal Print</h3>
+            <a href="posts/cloud_services_universal_print.html" class="text-blue-600 dark:text-blue-500 hover:underline">Read more...</a>
           </div>
         </div>
       </section>
 
       <section class="mb-10">
-        <h2 class="text-2xl font-semibold mb-4 border-b pb-2">Protect your personal information</h2>
+        <h2 class="text-2xl font-semibold my-4 text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-700 pb-2">Protect your personal information</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
-            <h3 class="text-xl font-semibold mb-2">Microsoft account</h3>
-            <a href="posts/cloud_services_microsoft_account.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition-all duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
+            <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Microsoft account</h3>
+            <a href="posts/cloud_services_microsoft_account.html" class="text-blue-600 dark:text-blue-500 hover:underline">Read more...</a>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
-            <h3 class="text-xl font-semibold mb-2">Find my device</h3>
-            <a href="posts/cloud_services_find_my_device.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition-all duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
+            <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Find my device</h3>
+            <a href="posts/cloud_services_find_my_device.html" class="text-blue-600 dark:text-blue-500 hover:underline">Read more...</a>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
-            <h3 class="text-xl font-semibold mb-2">OneDrive for personal use</h3>
-            <a href="posts/cloud_services_onedrive_for_personal_use.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition-all duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
+            <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">OneDrive for personal use</h3>
+            <a href="posts/cloud_services_onedrive_for_personal_use.html" class="text-blue-600 dark:text-blue-500 hover:underline">Read more...</a>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
-            <h3 class="text-xl font-semibold mb-2">Family Safety</h3>
-            <a href="posts/cloud_services_family_safety.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition-all duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
+            <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Family Safety</h3>
+            <a href="posts/cloud_services_family_safety.html" class="text-blue-600 dark:text-blue-500 hover:underline">Read more...</a>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
-            <h3 class="text-xl font-semibold mb-2">Personal Vault</h3>
-            <a href="posts/cloud_services_personal_vault.html" class="text-blue-600 hover:text-blue-800 hover:underline">Read more...</a>
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition-all duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
+            <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Personal Vault</h3>
+            <a href="posts/cloud_services_personal_vault.html" class="text-blue-600 dark:text-blue-500 hover:underline">Read more...</a>
           </div>
         </div>
       </section>

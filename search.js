@@ -1,9 +1,19 @@
 document.addEventListener('DOMContentLoaded', function () {
   const searchInput = document.getElementById('search-navbar');
-  if (!searchInput) {
-    console.error('Search input not found');
+  const searchToggleButton = document.getElementById('search-toggle-button');
+  const searchInputContainer = document.getElementById('search-input-container');
+
+  if (!searchInput || !searchToggleButton || !searchInputContainer) {
+    console.error('Search elements not found. Ensure search-navbar, search-toggle-button, and search-input-container exist.');
     return;
   }
+
+  searchToggleButton.addEventListener('click', function() {
+    searchInputContainer.classList.toggle('hidden');
+    if (!searchInputContainer.classList.contains('hidden')) {
+      searchInput.focus();
+    }
+  });
 
   const searchableContent = Array.from(document.querySelectorAll('main h1, main h2, main p, main li, main td, main th, main span, main a'));
 
