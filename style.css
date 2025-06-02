@@ -32,3 +32,18 @@
         font-size: 1rem; /* Adjust vulnerability title size */
     }
 }
+
+#search-input-container.search-input-active {
+  opacity: 1;
+  width: 16rem; /* Tailwind's w-64 */
+  pointer-events: auto;
+}
+
+/* Optional: Adjust width for smaller screens if desired */
+@media (max-width: 767px) { /* md breakpoint is 768px */
+  #search-input-container.search-input-active {
+    /* On mobile, it might take more width or behave differently with current nav structure */
+    /* For now, let's ensure it has a visible width on mobile too */
+    width: 12rem; /* Tailwind's w-48, adjust as needed */
+  }
+}

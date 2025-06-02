@@ -8,12 +8,27 @@ document.addEventListener('DOMContentLoaded', function () {
     return;
   }
 
-  // searchToggleButton.addEventListener('click', function() {
-  //   searchInputContainer.classList.toggle('hidden');
-  //   if (!searchInputContainer.classList.contains('hidden')) {
-  //     searchInput.focus();
-  //   }
-  // });
+  searchToggleButton.addEventListener('click', function() {
+    searchInputContainer.classList.toggle('search-input-active');
+    if (searchInputContainer.classList.contains('search-input-active')) {
+      searchInput.focus(); // Focus when opening
+    }
+  });
+
+  // New blur handler for searchInput
+  searchInput.addEventListener('blur', function() {
+    // Use a minimal timeout to allow click events on other elements (like the toggle button) to be processed first
+    setTimeout(() => {
+      // If the search input container is still visible (i.e., toggle button wasn't clicked to hide it)
+      // and the newly focused element is NOT the toggle button itself or within the search input, then hide.
+      // This check is to prevent hiding if the user clicks the toggle button to close.
+      if (searchInputContainer.classList.contains('search-input-active') &&
+          document.activeElement !== searchToggleButton &&
+          document.activeElement !== searchInput) {
+        searchInputContainer.classList.remove('search-input-active');
+      }
+    }, 100); // A small delay like 100ms often works well.
+  });
 
   const searchableContent = Array.from(document.querySelectorAll('main h1, main h2, main p, main li, main td, main th, main span, main a'));
 
