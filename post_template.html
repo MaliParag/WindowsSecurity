@@ -204,11 +204,11 @@
                         if (level === 1) {
                             link.classList.add('font-semibold');
                         } else if (level === 2) {
-                            link.classList.add('ml-2');
-                        } else if (level === 3) {
                             link.classList.add('ml-4');
+                        } else if (level === 3) {
+                            link.classList.add('ml-8');
                         } else if (level >= 4) {
-                            link.classList.add('ml-6');
+                            link.classList.add('ml-12');
                         }
 
                         listItem.appendChild(link);
@@ -239,6 +239,6 @@
       });
   });
 </script>
-<button id="jump-to-toc-btn" class="fixed bottom-5 right-5 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full shadow-lg z-50">↑ ToC</button>
+<button id="jump-to-toc-btn" class="fixed bottom-5 right-5 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full shadow-lg z-50"></button>
 </body>
 </html>
