@@ -217,6 +217,19 @@
                     tocContainer.appendChild(tocList);
                 }
             }
+
+            // Jump to TOC button functionality
+            const jumpToTocButton = document.getElementById('jump-to-toc-btn');
+            const tocContainerForScroll = document.getElementById('toc-container');
+
+            if (jumpToTocButton && tocContainerForScroll) {
+              jumpToTocButton.addEventListener('click', () => {
+                tocContainerForScroll.scrollIntoView({ behavior: 'smooth' });
+              });
+            } else {
+              if (!jumpToTocButton) console.warn('Jump to TOC button not found.');
+              if (!tocContainerForScroll) console.warn('TOC container not found for scroll.');
+            }
           });
       })
       .catch(error => {
@@ -226,5 +239,6 @@
       });
   });
 </script>
+<button id="jump-to-toc-btn" class="fixed bottom-5 right-5 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full shadow-lg z-50">↑ ToC</button>
 </body>
 </html>
