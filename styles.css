@@ -1,0 +1,292 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6; /* Default line height for the body */
+}
+
+#markdown-content {
+  /* Ensure Inter font is inherited or explicitly set if needed */
+  font-family: 'Inter', sans-serif;
+}
+
+#markdown-content h1 {
+  font-size: 2.25rem; /* text-4xl (36px) */
+  font-weight: 700; /* font-bold */
+  color: #111827; /* text-gray-900 */
+  border-bottom-width: 1px;
+  border-color: #D1D5DB; /* border-gray-300 */
+  padding-bottom: 0.75rem; /* pb-3 (12px) */
+  margin-top: 1.5rem; /* Optional: Add some top margin */
+  margin-bottom: 1.5rem; /* mb-6 (24px) */
+}
+.dark #markdown-content h1 {
+  color: #FFFFFF; /* dark:text-white */
+  border-color: #4B5563; /* dark:border-gray-600 */
+}
+
+#markdown-content h2 {
+  font-size: 1.875rem; /* text-3xl (30px) */
+  font-weight: 600; /* font-semibold */
+  color: #1F2937; /* text-gray-800 */
+  border-bottom-width: 1px;
+  border-color: #D1D5DB; /* border-gray-300 */
+  padding-bottom: 0.5rem; /* pb-2 (8px) */
+  margin-top: 2rem; /* mt-8 (32px) */
+  margin-bottom: 1.25rem; /* mb-5 (20px) */
+}
+.dark #markdown-content h2 {
+  color: #F9FAFB; /* dark:text-gray-100 */
+  border-color: #4B5563; /* dark:border-gray-600 */
+}
+
+#markdown-content h3 {
+  font-size: 1.5rem; /* text-2xl (24px) */
+  font-weight: 600; /* font-semibold */
+  color: #1F2937; /* text-gray-800 */
+  margin-top: 1.75rem; /* mt-7 (28px) */
+  margin-bottom: 1rem; /* mb-4 (16px) */
+}
+.dark #markdown-content h3 {
+  color: #F9FAFB; /* dark:text-gray-100 */
+}
+
+#markdown-content h4 {
+  font-size: 1.25rem; /* text-xl (20px) */
+  font-weight: 600; /* font-semibold */
+  color: #1F2937; /* text-gray-800 */
+  margin-top: 1.5rem; /* mt-6 (24px) */
+  margin-bottom: 1rem; /* mb-4 (16px) */
+}
+.dark #markdown-content h4 {
+  color: #F9FAFB; /* dark:text-gray-100 */
+}
+
+#markdown-content h5 {
+  font-size: 1.125rem; /* text-lg (18px) */
+  font-weight: 600; /* font-semibold */
+  color: #1F2937; /* text-gray-800 */
+  margin-top: 1.25rem; /* mt-5 (20px) */
+  margin-bottom: 0.75rem; /* mb-3 (12px) */
+}
+.dark #markdown-content h5 {
+  color: #F9FAFB; /* dark:text-gray-100 */
+}
+
+#markdown-content h6 {
+  font-size: 1rem; /* text-base (16px) */
+  font-weight: 600; /* font-semibold */
+  color: #1F2937; /* text-gray-800 */
+  margin-top: 1rem; /* mt-4 (16px) */
+  margin-bottom: 0.75rem; /* mb-3 (12px) */
+}
+.dark #markdown-content h6 {
+  color: #F9FAFB; /* dark:text-gray-100 */
+}
+
+#markdown-content p {
+  font-size: 1.125rem; /* text-lg (18px) - Increased for blog readability */
+  color: #374151; /* text-gray-700 */
+  line-height: 1.75; /* Increased for better flow */
+  margin-bottom: 1.5rem; /* mb-6 (24px) - Increased for more spacing */
+}
+.dark #markdown-content p {
+  color: #D1D5DB; /* dark:text-gray-300 */
+}
+
+#markdown-content a {
+  color: #2563EB; /* text-blue-600 */
+  text-decoration: underline;
+  font-weight: 500; /* font-medium */
+}
+#markdown-content a:hover {
+  color: #1D4ED8; /* darker blue on hover */
+}
+.dark #markdown-content a {
+  color: #60A5FA; /* dark:text-blue-400 */
+}
+.dark #markdown-content a:hover {
+  color: #93C5FD; /* lighter blue on hover in dark mode */
+}
+
+#markdown-content ul,
+#markdown-content ol {
+  list-style-position: outside; /* 'outside' for better alignment of markers */
+  margin-bottom: 1.5rem; /* mb-6 (24px) - Increased */
+  padding-left: 1.75rem; /* pl-7 (28px) - Increased for better indentation */
+  color: #374151; /* text-gray-700 */
+  font-size: 1.125rem; /* text-lg (18px) - Match paragraph */
+  line-height: 1.75; /* Match paragraph */
+}
+#markdown-content ul { list-style-type: disc; }
+#markdown-content ol { list-style-type: decimal; }
+
+.dark #markdown-content ul,
+.dark #markdown-content ol {
+  color: #D1D5DB; /* dark:text-gray-300 */
+}
+
+#markdown-content li {
+  margin-bottom: 0.625rem; /* mb-2.5 (10px) - Slightly increased */
+}
+#markdown-content li > ul,
+#markdown-content li > ol {
+  margin-top: 0.625rem; /* mt-2.5 (10px) */
+  margin-bottom: 0.625rem; /* Added for spacing nested lists */
+}
+
+#markdown-content blockquote {
+  border-left-width: 4px;
+  border-color: #3B82F6; /* border-blue-500 */
+  padding-left: 1.25rem; /* pl-5 (20px) */
+  padding-top: 1rem; /* py-4 (16px) - Increased */
+  padding-bottom: 1rem; /* py-4 (16px) - Increased */
+  margin-top: 1.5rem; /* Added */
+  margin-bottom: 1.5rem; /* mb-6 (24px) */
+  font-style: italic;
+  color: #4B5563; /* text-gray-600 */
+  background-color: #EFF6FF; /* bg-blue-50 */
+  border-top-right-radius: 0.375rem; /* rounded-r-md */
+  border-bottom-right-radius: 0.375rem; /* rounded-r-md */
+}
+.dark #markdown-content blockquote {
+  border-color: #2563EB; /* dark:border-blue-600 */
+  color: #9CA3AF; /* dark:text-gray-400 */
+  background-color: #1F2937; /* dark:bg-gray-800 */
+}
+#markdown-content blockquote p {
+  margin-bottom: 0;
+  font-size: 1.125rem; /* text-lg - Match paragraph */
+  line-height: 1.75; /* Match paragraph */
+}
+.dark #markdown-content blockquote p {
+ color: #D1D5DB; /* Ensure text color contrasts with blockquote background in dark mode */
+}
+
+
+#markdown-content pre {
+  background-color: #1F2937; /* bg-gray-800 */
+  color: #E5E7EB; /* text-gray-200 */
+  padding: 1.25rem; /* p-5 (20px) - Increased */
+  border-radius: 0.5rem; /* rounded-lg (8px) */
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+  overflow-x: auto;
+  margin-top: 1.5rem; /* Added */
+  margin-bottom: 1.5rem; /* mb-6 (24px) */
+  font-size: 0.9375rem; /* (15px) - Slightly increased for readability */
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; /* Common monospace stack */
+  line-height: 1.6; /* Line height for code */
+  border-width: 1px;
+  border-color: #374151; /* border-gray-700 */
+}
+.dark #markdown-content pre {
+  background-color: #0D1117; /* A common dark background for code, e.g., GitHub dark */
+  color: #C9D1D9; /* Lighter text for dark code background */
+  border-color: #30363D; /* Darker border for dark code background */
+}
+
+/* For inline code */
+#markdown-content code {
+  background-color: #FCE7F3; /* bg-pink-100 - Softer than orange */
+  color: #9D174D; /* text-pink-700 */
+  padding: 0.25em 0.5em; /* em based padding */
+  border-radius: 0.375rem; /* rounded-md (6px) */
+  font-size: 0.9em; /* Relative to surrounding text */
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; /* Monospace stack */
+}
+/* For inline code in dark mode */
+.dark #markdown-content code {
+  background-color: #50223C; /* Adjusted dark pink */
+  color: #FBCFE8; /* text-pink-200 */
+}
+
+/* Reset for code inside pre, as pre already has styling */
+#markdown-content pre code {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  color: inherit; /* Inherits from pre */
+  font-size: inherit; /* Inherits from pre */
+  /* No specific dark mode for pre code as it inherits from pre's dark mode */
+}
+
+#markdown-content table {
+  width: 100%;
+  margin-top: 1.5rem; /* Added */
+  margin-bottom: 1.5rem; /* mb-6 (24px) */
+  text-align: left;
+  font-size: 1rem; /* (16px) - Increased for table body */
+  color: #4B5563; /* text-gray-600 */
+  border-collapse: collapse;
+  border-width: 1px;
+  border-color: #D1D5DB; /* border-gray-300 */
+}
+.dark #markdown-content table {
+  color: #D1D5DB; /* dark:text-gray-300 */
+  border-color: #4B5563; /* dark:border-gray-600 */
+}
+
+#markdown-content table thead {
+  font-size: 0.875rem; /* text-sm (14px) */
+  color: #374151; /* text-gray-700 */
+  text-transform: uppercase;
+  background-color: #F3F4F6; /* bg-gray-100 */
+}
+.dark #markdown-content table thead {
+  color: #E5E7EB; /* dark:text-gray-200 */
+  background-color: #374151; /* dark:bg-gray-750 - using a common dark background */
+}
+
+#markdown-content table th,
+#markdown-content table td {
+  padding: 0.75rem 1rem; /* py-3 px-4 (12px, 16px) - Adjusted padding */
+  border-width: 1px;
+  border-color: #D1D5DB; /* border-gray-300 */
+}
+.dark #markdown-content table th,
+.dark #markdown-content table td {
+  border-color: #4B5563; /* dark:border-gray-600 */
+}
+
+#markdown-content table tbody tr:nth-child(even) {
+  background-color: #F9FAFB; /* bg-gray-50 */
+}
+.dark #markdown-content table tbody tr:nth-child(even) {
+  background-color: #2C3542; /* Slightly different dark for even rows */
+}
+
+#markdown-content table tbody tr:hover {
+  background-color: #F0F9FF; /* A light blue, e.g. sky-50 */
+}
+.dark #markdown-content table tbody tr:hover {
+  background-color: #374151; /* dark:bg-gray-700 */
+}
+
+#markdown-content hr {
+  margin-top: 2.5rem; /* my-10 (40px) - Increased */
+  margin-bottom: 2.5rem; /* my-10 (40px) - Increased */
+  border-color: #D1D5DB; /* border-gray-300 */
+  border-top-width: 1px;
+}
+.dark #markdown-content hr {
+  border-color: #4B5563; /* dark:border-gray-600 */
+}
+
+#markdown-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem; /* rounded-lg (8px) */
+  margin-top: 1.5rem; /* my-6 (24px) */
+  margin-bottom: 1.5rem; /* my-6 (24px) */
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -2px rgba(0,0,0,.1); /* shadow-lg */
+  border-width: 1px;
+  border-color: #E5E7EB; /* border-gray-200 */
+  display: block; /* For centering with margin auto */
+  margin-left: auto;
+  margin-right: auto;
+}
+.dark #markdown-content img {
+  border-color: #374151; /* dark:border-gray-700 */
+}
