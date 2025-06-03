@@ -173,13 +173,14 @@
     // This is a client-side check and real security would need server-side validation if paths were more complex.
     // For this static site context, it primarily prevents malformed URLs.
     const sanitizedPostName = postName.replace(/[^a-zA-Z0-9-_]/g, '');
+    const lowerCasePostName = sanitizedPostName.toLowerCase();
     if (sanitizedPostName !== postName) {
         contentElement.innerHTML = '<p class="text-red-500">Error: Invalid characters in post name.</p>';
         document.title = 'Error - Windows Security';
         return;
     }
 
-    const mdFilePath = `posts/md/${sanitizedPostName}.md`;
+    const mdFilePath = `posts/md/${lowerCasePostName}.md`;
 
     fetch(mdFilePath)
       .then(response => {
@@ -195,7 +196,7 @@
           document.title = h1Match[1] + " - Windows Security";
         } else {
           // Fallback title if no H1 is found
-          const titleFriendlyPostName = sanitizedPostName.replace(/-/g, ' ').replace(/_/g, ' ');
+          const titleFriendlyPostName = lowerCasePostName.replace(/-/g, ' ').replace(/_/g, ' ');
           function capitalizeWords(str) {
             return str.toLowerCase().replace(/\b\w/g, char => char.toUpperCase());
           }
@@ -215,7 +216,7 @@
       })
       .catch(error => {
         console.error('Error fetching or parsing Markdown:', error);
-        contentElement.innerHTML = `<p class="text-red-500">Error loading post: ${sanitizedPostName}.md. ${error.message}. Make sure the file exists in the 'posts/md/' directory.</p>`;
+        contentElement.innerHTML = `<p class="text-red-500">Error loading post: ${lowerCasePostName}.md. ${error.message}. Make sure the file exists in the 'posts/md/' directory.</p>`;
         document.title = 'Post Not Found - Windows Security';
       });
   });
