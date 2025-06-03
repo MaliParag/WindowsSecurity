@@ -73,6 +73,7 @@
 </nav>
 <div class="container mx-auto max-w-4xl p-6">
   <div id="last-updated-container" class="text-sm text-gray-600 dark:text-gray-400 mb-6"></div>
+  <div id="toc-container"></div>
   <main id="markdown-content">
     <!-- Markdown content will be loaded here -->
   </main>
@@ -162,6 +163,60 @@
           .finally(() => {
             // Render markdown content regardless of header fetch success/failure
             contentElement.innerHTML = marked.parse(markdown);
+
+            // TOC Generation
+            const tocContainer = document.getElementById('toc-container');
+            if (tocContainer) {
+                const headings = contentElement.querySelectorAll('h1, h2, h3, h4, h5, h6');
+                if (headings.length > 0) {
+                    const tocList = document.createElement('ul');
+                    // Add a title for the TOC
+                    const tocTitle = document.createElement('h2');
+                    tocTitle.textContent = 'Table of Contents';
+                    tocTitle.classList.add('text-xl', 'font-semibold', 'mb-2', 'dark:text-white'); // Tailwind classes for styling
+                    tocContainer.appendChild(tocTitle);
+
+                    headings.forEach((heading, index) => {
+                        let id = heading.id;
+                        if (!id) {
+                            // Generate an ID from the text content
+                            id = heading.textContent.trim().toLowerCase()
+                                .replace(/\s+/g, '-') // Replace spaces with hyphens
+                                .replace(/[^\w-]+/g, ''); // Remove non-alphanumeric characters except hyphens
+                            // Ensure uniqueness if multiple headings have the same text
+                            let uniqueId = id;
+                            let counter = 1;
+                            while (document.getElementById(uniqueId)) {
+                                uniqueId = `${id}-${counter}`;
+                                counter++;
+                            }
+                            id = uniqueId;
+                            heading.id = id;
+                        }
+
+                        const listItem = document.createElement('li');
+                        const link = document.createElement('a');
+                        link.href = `#${id}`;
+                        link.textContent = heading.textContent;
+                        // Add Tailwind classes for styling based on heading level
+                        const level = parseInt(heading.tagName.substring(1));
+                        link.classList.add('hover:underline', 'dark:text-gray-300', 'text-gray-700'); // Common link styles
+                        if (level === 1) {
+                            link.classList.add('font-semibold');
+                        } else if (level === 2) {
+                            link.classList.add('ml-2');
+                        } else if (level === 3) {
+                            link.classList.add('ml-4');
+                        } else if (level >= 4) {
+                            link.classList.add('ml-6');
+                        }
+
+                        listItem.appendChild(link);
+                        tocList.appendChild(listItem);
+                    });
+                    tocContainer.appendChild(tocList);
+                }
+            }
           });
       })
       .catch(error => {
