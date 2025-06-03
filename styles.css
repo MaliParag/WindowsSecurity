@@ -312,6 +312,8 @@ body {
   list-style-type: none;
   padding-left: 0; /* Reset browser default */
   margin-top: 0.75rem; /* mt-3, space below the title */
+  white-space: nowrap;
+  overflow-x: auto;
 }
 
 #toc-container li {
@@ -324,6 +326,8 @@ body {
   font-family: 'Inter', sans-serif; /* Ensure consistent font */
   font-size: 0.95rem; /* Slightly smaller than main text for visual hierarchy */
   /* text-decoration: none; -- Removing this as Tailwind's hover:underline is preferred */
+  display: inline-block;
+  padding-right: 15px;
 }
 
 /* Example: If you wanted a specific non-Tailwind hover effect for TOC links:
@@ -335,3 +339,11 @@ body {
   color: #93C5FD; // Example: lighter blue on hover in dark mode
 }
 */
+
+#jump-to-toc-btn {
+  /* Tailwind classes like 'fixed', 'bottom-5', 'right-5', 'bg-blue-600', 'text-white', 'py-2', 'px-4', 'rounded-full', 'shadow-lg' are already applied. */
+  /* We can add overrides or additional styles here if needed. */
+  cursor: pointer;
+  /* z-index: 1000; /* Ensure it's above other elements. z-50 from Tailwind is 50, so 1000 is safer if other high z-index elements exist. */
+  /* However, let's stick to Tailwind's z-50 for now as it was already added and is likely sufficient. If issues arise, we can increase it. */
+}
