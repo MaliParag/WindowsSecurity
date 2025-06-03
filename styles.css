@@ -290,3 +290,48 @@ body {
 .dark #markdown-content img {
   border-color: #374151; /* dark:border-gray-700 */
 }
+
+/* Table of Contents Styles */
+#toc-container {
+  border: 1px solid #D1D5DB; /* border-gray-300 */
+  padding: 1.25rem; /* p-5 */
+  border-radius: 0.375rem; /* rounded-md */
+  margin-bottom: 1.5rem; /* mb-6 */
+  background-color: #F9FAFB; /* bg-gray-50 */
+}
+
+.dark #toc-container {
+  border-color: #4B5563; /* dark:border-gray-600 */
+  background-color: #1F2937; /* dark:bg-gray-800 */
+}
+
+/* The TOC title (h2) is styled by Tailwind classes in the JS (text-xl, font-semibold, mb-2, dark:text-white).
+   No additional CSS is added here for the title to keep styling centralized in JS for it. */
+
+#toc-container ul {
+  list-style-type: none;
+  padding-left: 0; /* Reset browser default */
+  margin-top: 0.75rem; /* mt-3, space below the title */
+}
+
+#toc-container li {
+  margin-bottom: 0.5rem; /* mb-2 */
+}
+
+/* Links are primarily styled by Tailwind classes added in JavaScript (color, hover, indentation).
+   The following are minimal additions/overrides. */
+#toc-container a {
+  font-family: 'Inter', sans-serif; /* Ensure consistent font */
+  font-size: 0.95rem; /* Slightly smaller than main text for visual hierarchy */
+  /* text-decoration: none; -- Removing this as Tailwind's hover:underline is preferred */
+}
+
+/* Example: If you wanted a specific non-Tailwind hover effect for TOC links:
+#toc-container a:hover {
+  text-decoration: underline;
+  color: #1D4ED8; // Example: darker blue on hover
+}
+.dark #toc-container a:hover {
+  color: #93C5FD; // Example: lighter blue on hover in dark mode
+}
+*/
