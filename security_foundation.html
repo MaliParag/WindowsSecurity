@@ -82,46 +82,55 @@
 
         <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
           <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Common Criteria (CC)</h2>
+          <p class="post-preview-text text-gray-600 dark:text-gray-400 text-sm mt-1">Preview loading...</p>
           <a href="#!" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
         </div>
 
         <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
           <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">DevDivSecOps</h2>
+          <p class="post-preview-text text-gray-600 dark:text-gray-400 text-sm mt-1">Preview loading...</p>
           <a href="#!" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
         </div>
 
         <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
           <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Federal Information Processing Standard (FIPS)</h2>
+          <p class="post-preview-text text-gray-600 dark:text-gray-400 text-sm mt-1">Preview loading...</p>
           <a href="#!" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
         </div>
 
         <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
           <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Microsoft Offensive Research And Security Engineering (MORSE)</h2>
+          <p class="post-preview-text text-gray-600 dark:text-gray-400 text-sm mt-1">Preview loading...</p>
           <a href="#!" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
         </div>
 
         <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
           <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Secure Future Initiative (SFI)</h2>
+          <p class="post-preview-text text-gray-600 dark:text-gray-400 text-sm mt-1">Preview loading...</p>
           <a href="#!" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
         </div>
 
         <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
           <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Security Development Lifecycle (SDL)</h2>
+          <p class="post-preview-text text-gray-600 dark:text-gray-400 text-sm mt-1">Preview loading...</p>
           <a href="#!" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
         </div>
 
         <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
           <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Software Bill Of Materials (SBOM)</h2>
+          <p class="post-preview-text text-gray-600 dark:text-gray-400 text-sm mt-1">Preview loading...</p>
           <a href="#!" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
         </div>
 
         <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
           <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Windows Kernel And Microsoft Bug Bounty Programs</h2>
+          <p class="post-preview-text text-gray-600 dark:text-gray-400 text-sm mt-1">Preview loading...</p>
           <a href="#!" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
         </div>
 
         <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
           <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Windows Software Development Kit (SDK)</h2>
+          <p class="post-preview-text text-gray-600 dark:text-gray-400 text-sm mt-1">Preview loading...</p>
           <a href="#!" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
         </div>
 
@@ -129,5 +138,63 @@
     </main>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    function loadPostPreviews() {
+      const postContainers = document.querySelectorAll('.grid > div.bg-white');
+      postContainers.forEach(container => {
+        const postLink = container.querySelector('a[href*="post_template.html?post="]');
+        const previewElement = container.querySelector('.post-preview-text');
+
+        if (postLink && previewElement) {
+          const href = postLink.getAttribute('href');
+          const urlParams = new URLSearchParams(href.split('?')[1]);
+          const postName = urlParams.get('post');
+
+          if (postName) {
+            const markdownFilePath = `posts/md/${postName}.md`;
+            fetch(markdownFilePath)
+              .then(response => {
+                if (!response.ok) {
+                  throw new Error(`HTTP error! status: ${response.status} for ${markdownFilePath}`);
+                }
+                return response.text();
+              })
+              .then(markdown => {
+                if (typeof marked === 'undefined') {
+                  console.error('marked.js is not loaded.');
+                  previewElement.textContent = "Error: Markdown parser not loaded.";
+                  return;
+                }
+                const html = marked.parse(markdown);
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = html;
+                const firstParagraph = tempDiv.querySelector('p');
+
+                if (firstParagraph) {
+                  let previewText = firstParagraph.textContent || firstParagraph.innerText || "";
+                  if (previewText.length > 200) {
+                    previewText = previewText.substring(0, 200).trim() + "...";
+                  }
+                  previewElement.textContent = previewText;
+                } else {
+                  previewElement.textContent = "No preview available.";
+                }
+              })
+              .catch(error => {
+                console.error('Error fetching or parsing markdown:', error);
+                previewElement.textContent = "Preview not found or error loading.";
+              });
+          } else {
+            // If postName is not found, it implies the link is not for a post or is malformed.
+            // previewElement.textContent = "Not a post link.";
+            // previewElement.style.display = 'none'; // Or hide it
+          }
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', loadPostPreviews);
+  </script>
 </body>
 </html>
