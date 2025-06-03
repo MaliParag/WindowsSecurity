@@ -17,72 +17,62 @@
       body {
         font-family: 'Inter', sans-serif; /* Apply Inter as the base font */
       }
-      #markdown-content h1,
-      #markdown-content h2,
-      #markdown-content h3,
-      #markdown-content h4,
-      #markdown-content h5,
-      #markdown-content h6 {
-        @apply text-gray-900 dark:text-white mb-4 mt-6 font-semibold;
-      }
-      #markdown-content h1 { @apply text-4xl border-b pb-2 mb-6; }
-      #markdown-content h2 { @apply text-3xl border-b pb-2 mb-5; }
-      #markdown-content h3 { @apply text-2xl; }
-      #markdown-content h4 { @apply text-xl; }
-      #markdown-content h5 { @apply text-lg; }
-      #markdown-content h6 { @apply text-base; }
+      #markdown-content h1 { @apply text-4xl font-bold text-gray-900 dark:text-white border-b border-gray-300 dark:border-gray-600 pb-3 mb-6; }
+      #markdown-content h2 { @apply text-3xl font-semibold text-gray-800 dark:text-gray-100 border-b border-gray-300 dark:border-gray-600 pb-2 mb-5; }
+      #markdown-content h3 { @apply text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-4; }
+      #markdown-content h4 { @apply text-xl font-semibold text-gray-800 dark:text-gray-100 mb-4; }
+      #markdown-content h5 { @apply text-lg font-semibold text-gray-800 dark:text-gray-100 mb-3; }
+      #markdown-content h6 { @apply text-base font-semibold text-gray-800 dark:text-gray-100 mb-3; }
 
       #markdown-content p {
-        @apply text-gray-700 dark:text-gray-100 mb-4 leading-relaxed text-lg;
+        @apply text-base text-gray-700 dark:text-gray-300 leading-relaxed mb-5;
       }
 
       #markdown-content a {
-        @apply text-blue-600 dark:text-blue-400 hover:underline;
+        @apply text-blue-600 dark:text-blue-400 hover:underline font-medium;
       }
 
       #markdown-content ul,
       #markdown-content ol {
-        @apply list-inside mb-4 pl-4 text-gray-700 dark:text-gray-300 text-lg;
+        @apply list-inside mb-5 pl-4 text-gray-700 dark:text-gray-300 text-base leading-relaxed;
       }
       #markdown-content ul { @apply list-disc; }
       #markdown-content ol { @apply list-decimal; }
       #markdown-content li { @apply mb-2; }
-      #markdown-content li > ul, 
+      #markdown-content li > ul,
       #markdown-content li > ol {
         @apply mt-2; /* Add margin to nested lists */
       }
 
       #markdown-content blockquote {
-        @apply border-l-4 border-gray-300 dark:border-gray-600 pl-4 py-2 mb-4 italic text-gray-600 dark:text-gray-400;
+        @apply border-l-4 border-blue-500 dark:border-blue-600 pl-5 py-3 mb-5 italic text-gray-600 dark:text-gray-400 bg-blue-50 dark:bg-gray-800 rounded-r-md;
       }
       #markdown-content blockquote p {
-        @apply mb-0; /* Remove bottom margin for paragraphs inside blockquotes if needed */
+        @apply mb-0 text-base;
       }
 
       #markdown-content pre {
-        @apply bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 p-4 rounded-md shadow-sm overflow-x-auto mb-4 text-sm font-mono;
+        @apply bg-gray-800 dark:bg-gray-900 text-gray-200 dark:text-gray-300 p-4 rounded-lg shadow-sm overflow-x-auto mb-5 text-sm font-mono border border-gray-700 dark:border-gray-600;
       }
       #markdown-content code { /* For inline code */
-        @apply bg-pink-100 dark:bg-pink-900 text-pink-700 dark:text-pink-300 px-1.5 py-1 rounded-md text-sm font-mono;
+        @apply bg-orange-100 dark:bg-orange-900 text-orange-700 dark:text-orange-300 px-1.5 py-0.5 rounded-md text-sm font-mono;
       }
       #markdown-content pre code { /* Reset for code inside pre, as pre already has styling */
-        @apply bg-transparent p-0 rounded-none;
-        font-family: inherit; /* Inherit font-family (mono) from pre tag */
-        /* Color will also be inherited from pre tag */
+        @apply bg-transparent p-0 rounded-none text-inherit;
       }
 
       #markdown-content table {
-        @apply w-full mb-4 text-left text-sm text-gray-500 dark:text-gray-200 border-collapse;
+        @apply w-full mb-6 text-left text-sm text-gray-600 dark:text-gray-300 border-collapse border border-gray-300 dark:border-gray-600;
       }
       #markdown-content table thead {
-        @apply text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-200;
+        @apply text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-750 dark:text-gray-200;
       }
       #markdown-content table th,
       #markdown-content table td {
         @apply px-6 py-3 border border-gray-300 dark:border-gray-600;
       }
       #markdown-content table tbody tr:nth-child(even) {
-        @apply bg-gray-50 dark:bg-gray-800;
+        @apply bg-gray-50 dark:bg-gray-850;
       }
        #markdown-content table tbody tr:hover {
         @apply bg-gray-100 dark:bg-gray-700;
@@ -93,60 +83,60 @@
       }
 
       #markdown-content img {
-        @apply max-w-full h-auto rounded-lg my-4 shadow-md;
+        @apply max-w-full h-auto rounded-lg my-6 shadow-lg border border-gray-200 dark:border-gray-700;
       }
     </style>
 </head>
-<body class="bg-white dark:bg-gray-900">
-<nav class="bg-white border-gray-200 dark:bg-gray-900">
+<body class="bg-gray-50 dark:bg-gray-900">
+<nav class="bg-blue-700 dark:bg-blue-800">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Windows Security</span>
+        <span class="self-center text-2xl font-semibold whitespace-nowrap text-white dark:text-white">Windows Security</span>
     </a>
-    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-200 rounded-lg md:hidden hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-gray-400 dark:text-gray-300 dark:hover:bg-blue-700 dark:focus:ring-gray-500" aria-controls="navbar-default" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
         </svg>
     </button>
     <div class="hidden w-full md:flex md:w-auto items-center" id="navbar-default">
-      <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+      <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-blue-600 rounded-lg bg-blue-700 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-blue-700 dark:bg-blue-800 md:dark:bg-blue-800 dark:border-blue-700">
         <li>
-          <a href="index.html" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
+          <a href="index.html" class="flex items-center justify-between w-full py-2 px-3 text-white rounded hover:bg-blue-600 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0 dark:text-white md:dark:hover:text-blue-400 dark:hover:bg-blue-700 dark:hover:text-white md:dark:hover:bg-transparent">
             <svg class="inline-block w-5 h-5 mr-1 align-text-bottom" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" /><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></svg>
             Home
           </a>
         </li>
         <li>
-          <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
+          <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-white rounded hover:bg-blue-600 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0 dark:text-white md:dark:hover:text-blue-400 dark:hover:bg-blue-700 dark:hover:text-white md:dark:hover:bg-transparent">
             Security Categories
             <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
             </svg>
           </button>
-          <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-              <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
-                <li><a href="cloud_services.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Cloud Services</a></li>
-                <li><a href="identity.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Identity</a></li>
-                <li><a href="application.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Application</a></li>
-                <li><a href="operating_system.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Operating System</a></li>
-                <li><a href="hardware.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Hardware</a></li>
-                <li><a href="security_foundation.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Security Foundation</a></li>
+          <div id="dropdownNavbar" class="z-10 hidden font-normal bg-blue-50 divide-y divide-blue-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+              <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownLargeButton">
+                <li><a href="cloud_services.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-600 dark:hover:text-white">Cloud Services</a></li>
+                <li><a href="identity.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-600 dark:hover:text-white">Identity</a></li>
+                <li><a href="application.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-600 dark:hover:text-white">Application</a></li>
+                <li><a href="operating_system.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-600 dark:hover:text-white">Operating System</a></li>
+                <li><a href="hardware.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-600 dark:hover:text-white">Hardware</a></li>
+                <li><a href="security_foundation.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-600 dark:hover:text-white">Security Foundation</a></li>
               </ul>
           </div>
         </li>
         <li>
-          <a href="timeline.html" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Timeline</a>
+          <a href="timeline.html" class="flex items-center justify-between w-full py-2 px-3 text-white rounded hover:bg-blue-600 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0 dark:text-white md:dark:hover:text-blue-400 dark:hover:bg-blue-700 dark:hover:text-white md:dark:hover:bg-transparent">Timeline</a>
         </li>
         <li>
-          <a href="resources.html" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Resources</a>
+          <a href="resources.html" class="flex items-center justify-between w-full py-2 px-3 text-white rounded hover:bg-blue-600 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0 dark:text-white md:dark:hover:text-blue-400 dark:hover:bg-blue-700 dark:hover:text-white md:dark:hover:bg-transparent">Resources</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 <div class="container mx-auto max-w-4xl p-6">
-  <div id="last-updated-container" class="text-sm text-gray-500 dark:text-gray-400 mb-4"></div>
+  <div id="last-updated-container" class="text-sm text-gray-600 dark:text-gray-400 mb-6"></div>
   <main id="markdown-content">
     <!-- Markdown content will be loaded here -->
   </main>
