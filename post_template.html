@@ -151,6 +151,7 @@
   </div>
 </nav>
 <div class="container mx-auto max-w-4xl p-6">
+  <div id="last-updated-container" class="text-sm text-gray-500 dark:text-gray-400 mb-4"></div>
   <main id="markdown-content">
     <!-- Markdown content will be loaded here -->
   </main>
@@ -211,7 +212,36 @@
         //   console.warn('DOMPurify not loaded. HTML will not be sanitized.');
         //   contentElement.innerHTML = marked.parse(markdown);
         // }
-        contentElement.innerHTML = marked.parse(markdown);
+
+        // Fetch last-modified header
+        fetch(mdFilePath, { method: 'HEAD' })
+          .then(response => {
+            if (response.ok) {
+              const lastModified = response.headers.get('Last-Modified');
+              if (lastModified) {
+                const lastUpdatedDate = new Date(lastModified);
+                const formattedDate = lastUpdatedDate.toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
+                });
+                const lastUpdatedContainer = document.getElementById('last-updated-container');
+                if (lastUpdatedContainer) {
+                  lastUpdatedContainer.textContent = "Last Updated: " + formattedDate;
+                }
+              } else {
+                console.warn('Last-Modified header not found.');
+              }
+            }
+          })
+          .catch(headerError => {
+            // Log error fetching header, but don't block content rendering
+            console.warn('Could not fetch Last-Modified header:', headerError);
+          })
+          .finally(() => {
+            // Render markdown content regardless of header fetch success/failure
+            contentElement.innerHTML = marked.parse(markdown);
+          });
       })
       .catch(error => {
         console.error('Error fetching or parsing Markdown:', error);
