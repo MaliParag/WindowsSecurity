@@ -1,8 +1,10 @@
-<!DOCTYPE html>
+import re
+
+html_content = """<!DOCTYPE html>
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Security Foundation - Windows Security</title>
+  <title>Application Security - Windows Security</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
   <!--
    IMPORTANT: The Tailwind CSS CDN (https://cdn.tailwindcss.com) is not recommended for production use.
@@ -46,10 +48,10 @@
               <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownLargeButton">
                 <li><a href="cloud_services.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-600 dark:hover:text-white">Cloud Services</a></li>
                 <li><a href="identity.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-600 dark:hover:text-white">Identity</a></li>
-                <li><a href="application.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-600 dark:hover:text-white">Application</a></li>
+                <li><a href="application.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-600 dark:hover:text-white text-orange-500 dark:text-orange-400" aria-current="page">Application</a></li>
                 <li><a href="operating_system.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-600 dark:hover:text-white">Operating System</a></li>
                 <li><a href="hardware.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-600 dark:hover:text-white">Hardware</a></li>
-                <li><a href="security_foundation.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-600 dark:hover:text-white text-orange-500 dark:text-orange-400" aria-current="page">Security Foundation</a></li>
+                <li><a href="security_foundation.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-600 dark:hover:text-white">Security Foundation</a></li>
               </ul>
           </div>
         </li>
@@ -71,67 +73,73 @@
           <svg class="fill-current w-3 h-3 mx-3 text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"/></svg>
         </li>
         <li class="flex items-center">
-          <span class="text-gray-600 dark:text-gray-400 font-medium">Security Foundation</span>
+          <span class="text-gray-600 dark:text-gray-400 font-medium">Application Security</span>
         </li>
       </ol>
     </nav>
     <main>
-      <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white mb-4">Security Foundation</h1>
-      <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">Explore the various topics related to Security Foundation:</p>
+      <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white mb-4">Application Security</h1>
+      <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">Explore the various topics related to Application Security:</p>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
 
         <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
-          <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Common Criteria (CC)</h2>
+          <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Applocker</h2>
           <p class="post-preview-text text-gray-600 dark:text-gray-400 text-sm mt-1">Preview loading...</p>
-          <a href="post_template.html?post=common_criteria" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
+          <a href="#!" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
         </div>
 
         <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
-          <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">DevDivSecOps</h2>
+          <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Browser Protection</h2>
           <p class="post-preview-text text-gray-600 dark:text-gray-400 text-sm mt-1">Preview loading...</p>
-          <a href="post_template.html?post=devdivsecops" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
+          <a href="#!" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
         </div>
 
         <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
-          <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Federal Information Processing Standard (FIPS)</h2>
+          <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Microsoft Defender Application Guard</h2>
           <p class="post-preview-text text-gray-600 dark:text-gray-400 text-sm mt-1">Preview loading...</p>
-          <a href="post_template.html?post=federal_information_processing_standard" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
+          <a href="#!" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
         </div>
 
         <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
-          <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Microsoft Offensive Research And Security Engineering (MORSE)</h2>
+          <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Microsoft Vulnerable Driver Block</h2>
           <p class="post-preview-text text-gray-600 dark:text-gray-400 text-sm mt-1">Preview loading...</p>
-          <a href="post_template.html?post=microsoft_offensive_research_and_security_engineering" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
+          <a href="#!" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
         </div>
 
         <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
-          <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Secure Future Initiative (SFI)</h2>
+          <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Smart App Control</h2>
           <p class="post-preview-text text-gray-600 dark:text-gray-400 text-sm mt-1">Preview loading...</p>
-          <a href="post_template.html?post=secure_future_initiative" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
+          <a href="#!" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
         </div>
 
         <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
-          <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Security Development Lifecycle (SDL)</h2>
+          <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Trusted Signing</h2>
           <p class="post-preview-text text-gray-600 dark:text-gray-400 text-sm mt-1">Preview loading...</p>
-          <a href="post_template.html?post=security_development_lifecycle" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
+          <a href="#!" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
         </div>
 
         <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
-          <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Software Bill Of Materials (SBOM)</h2>
+          <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Virtualization Based Integrity (VBI)</h2>
           <p class="post-preview-text text-gray-600 dark:text-gray-400 text-sm mt-1">Preview loading...</p>
-          <a href="post_template.html?post=software_bill_of_materials" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
+          <a href="#!" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
         </div>
 
         <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
-          <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Windows Kernel And Microsoft Bug Bounty Programs</h2>
+          <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Windows Sandbox</h2>
           <p class="post-preview-text text-gray-600 dark:text-gray-400 text-sm mt-1">Preview loading...</p>
-          <a href="post_template.html?post=windows_kernel_and_microsoft_bug_bounty_programs" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
+          <a href="#!" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
         </div>
 
         <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
-          <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Windows Software Development Kit (SDK)</h2>
+          <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Windows Subsystem For Linux (WSL)</h2>
           <p class="post-preview-text text-gray-600 dark:text-gray-400 text-sm mt-1">Preview loading...</p>
-          <a href="post_template.html?post=windows_software_development_kit" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
+          <a href="#!" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
+          <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">WSL App Isolation</h2>
+          <p class="post-preview-text text-gray-600 dark:text-gray-400 text-sm mt-1">Preview loading...</p>
+          <a href="#!" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
         </div>
 
       </div>
@@ -152,11 +160,11 @@
           const postName = urlParams.get('post');
 
           if (postName) {
-            const markdownFilePath = `posts/md/${postName}.md`;
+            const markdownFilePath = ;
             fetch(markdownFilePath)
               .then(response => {
                 if (!response.ok) {
-                  throw new Error(`HTTP error! status: ${response.status} for ${markdownFilePath}`);
+                  throw new Error();
                 }
                 return response.text();
               })
@@ -198,3 +206,65 @@
   </script>
 </body>
 </html>
+"""
+
+def generate_slug(title):
+    processed_title = title.lower()
+    # Remove content within parentheses specifically for slug generation
+    processed_title = re.sub(r'\s*\(.*\)\s*', '', processed_title)
+    processed_title = processed_title.replace('&', '_and_')
+    processed_title = re.sub(r'[^a-z0-9_]+', '_', processed_title)
+    processed_title = re.sub(r'_+', '_', processed_title)
+    processed_title = processed_title.strip('_')
+    return processed_title
+
+# Regex to find the div blocks and capture relevant parts including the heading tag (h2 or h3)
+div_pattern = re.compile(
+    r'(<div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out border border-gray-200 dark:border-gray-700">)' # 1: div_start
+    r'(.*?)' # 2: pre_heading_content (anything before heading)
+    r'(<h([23]) class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">)' # 3: heading_tag_start (captures h2 or h3), 4: heading_level (2 or 3)
+    r'(.*?)' # 5: title_text
+    r'(</h\4>)' # 6: heading_tag_end (uses backreference to match h2 or h3)
+    r'(.*?)' # 7: post_heading_content (anything between heading and anchor)
+    r'(<a href=")(.*?)(" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">.*?</a>)', # 8: anchor_tag_start, 9: current_href, 10: anchor_tag_end_class_and_text
+    re.DOTALL
+)
+
+updated_html_content = html_content
+links_updated_count = 0
+modified = False
+
+for match in div_pattern.finditer(html_content):
+    original_block = match.group(0)
+    div_start = match.group(1)
+    pre_heading_content = match.group(2)
+    heading_tag_start = match.group(3)
+    # heading_level = match.group(4) # Not strictly needed for replacement string
+    title_text = match.group(5)
+    heading_tag_end = match.group(6)
+    post_heading_content = match.group(7)
+    anchor_tag_start = match.group(8)
+    current_href = match.group(9)
+    anchor_tag_end_class_and_text = match.group(10)
+
+    cleaned_title = title_text.strip()
+    slug = generate_slug(cleaned_title)
+    new_href = f"post_template.html?post={slug}"
+
+    if current_href == "#!" or "sample-markdown-post" in current_href or not current_href.strip():
+        # Construct the updated block with all captured parts
+        updated_block = (div_start + pre_heading_content + heading_tag_start + title_text +
+                         heading_tag_end + post_heading_content + anchor_tag_start +
+                         new_href + anchor_tag_end_class_and_text)
+
+        if original_block != updated_block:
+            updated_html_content = updated_html_content.replace(original_block, updated_block)
+            links_updated_count += 1
+            modified = True
+
+if modified:
+    print("MODIFIED") # Signal that the file was changed
+    print(updated_html_content)
+else:
+    print("NO_CHANGES")
+    print(f"Links updated: {links_updated_count}")
