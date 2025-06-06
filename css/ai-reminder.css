@@ -1,1 +1,5 @@
-/* Styles for the AI-generated content reminder */
+/*
+ * The styles for the AI reminder banner are now handled directly
+ * with Tailwind CSS classes in js/ai-reminder.js.
+ * This file is currently not in use for that banner.
+ */
