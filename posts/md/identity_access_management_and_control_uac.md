@@ -1,6 +1,6 @@
 ## **Windows User Account Control**
 
-## **I. Introduction: The Gatekeeper of Windows Security**
+## **I. Introduction**
 
 Welcome to the fascinating world of Windows security, where every click and every process is meticulously managed, often by an unsung hero: User Account Control (UAC). Introduced with Windows Vista and Windows Server 2008, UAC is a built-in security feature designed to act as a digital bouncer, preventing unauthorized changes to the operating system and its applications [1]. At its heart, UAC enforces the Principle of Least Privilege (PoLP), ensuring that software runs with only the bare minimum permissions required, even when an administrator is at the helm [1].
 
@@ -8,7 +8,7 @@ UAC is far more than just a pop-up; it's a critical first-line defense against t
 
 In this report, we'll embark on a journey through UAC's storied past, dissect its intricate architecture, explore the nuances of its elevation prompts, unmask the clever ways it has been bypassed, understand Microsoft's evolving countermeasures, and peer into its future. Prepare to learn something new, even if you've been navigating Windows for decades!
 
-## **II. A Blast from the Past: Windows User Models Before UAC**
+## **II. Windows User Models Before UAC**
 
 To truly appreciate UAC, one must first understand the security landscape it emerged from—a landscape that was, for decades, akin to the digital Wild West.
 
@@ -115,7 +115,7 @@ Standard user accounts are designed with limited access, allowing them to perfor
 
 Microsoft strongly encourages operating as a standard user [4]. The policy options for standard users reinforce this by making elevation a deliberate, credential-based action. By making the standard user experience restrictive for administrative tasks, UAC pushes users towards a more secure default posture. This reduces the blast radius if a standard user's session is compromised. This behavior is central to UAC's success in promoting PoLP; it shifts the burden of security from "preventing bad things from happening when you're admin" to "only being admin when absolutely necessary."
 
-### **Behavior for Administrators in Admin Approval Mode: Elevate without Prompting, Prompt for Credentials/Consent (on/off Secure Desktop), Prompt for Consent for Non-Windows Binaries**
+### **Behavior for Administrators in Admin Approval Mode**
 
 Even users logged in with administrator accounts are subject to UAC, operating by default with standard user privileges in what's known as "Admin Approval Mode" [1]. When an administrator attempts a system-level change, UAC prompts them for confirmation or credentials [1]. The behavior of these prompts is determined by specific policy settings [18]:
 
@@ -128,11 +128,11 @@ Even users logged in with administrator accounts are subject to UAC, operating b
 
 The fact that even administrators are subject to UAC reinforces that UAC is not just for standard users; it's a system-wide control. The "Elevate without prompting" option, while convenient, significantly degrades security. The existence of less secure prompt options for administrators directly contributed to UAC bypasses, as it allowed attackers to target systems where UAC was effectively neutered for admin users. This highlights that UAC's effectiveness is highly dependent on its configuration. A technically knowledgeable administrator might disable UAC or set it to a less secure mode for convenience, unknowingly creating a larger attack surface. This emphasizes the need for robust Group Policy management in enterprise environments.
 
-## **V. The Chinks in the Armor: Known UAC Vulnerabilities and Exploitation**
+## **V. Known UAC Vulnerabilities and Exploitation**
 
 Despite its robust design and critical role in Windows security, UAC has faced its share of challenges. Over the years, numerous methods to bypass UAC have emerged, leading to a fascinating cat-and-mouse game between security researchers, attackers, and Microsoft.
 
-### **Understanding UAC Bypasses: Why They Exist (Design vs. Security Boundary)**
+### **Understanding UAC Bypasses**
 
 A crucial point of contention and a source of many UAC bypasses lies in Microsoft's official stance on UAC's role. Microsoft explicitly states that UAC was designed as a functionality tool to prevent accidental user errors and ill-written programs from compromising an endpoint's state, rather than primarily as a robust malware-security measure or a hard security boundary [2]. Instead, UAC is classified as a "defense-in-depth" feature [20]. This means that a bypass for UAC, by itself, does not necessarily constitute a direct security risk that warrants an immediate security update, unless it is chained with another vulnerability that affects a true security boundary (e.g., kernel-mode access from user-mode, or process-to-process isolation) [21].
 
