@@ -1,4 +1,4 @@
-# **Windows Credential Guard: A Technical Deep Dive for Computer Engineers**
+# **Windows Credential Guard: A Technical Deep Dive**
 
 ## **Executive Summary**
 
