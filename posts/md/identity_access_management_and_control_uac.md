@@ -1,4 +1,4 @@
-## **Unmasking UAC: A Deep Dive into Windows Access Management and Control**
+## **Windows User Account Control**
 
 ## **I. Introduction: The Gatekeeper of Windows Security**
 
