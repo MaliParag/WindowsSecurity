@@ -1,151 +1,120 @@
 <!DOCTYPE html>
+
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hardware Security - Windows Security</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
-  <!--
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hardware Security - Windows Security</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet"/>
+<!--
    IMPORTANT: The Tailwind CSS CDN (https://cdn.tailwindcss.com) is not recommended for production use.
    It's recommended to install Tailwind CSS as a PostCSS plugin or use the Tailwind CLI to generate a static CSS file.
    Please see https://tailwindcss.com/docs/installation for instructions.
    You will then need to link to your generated CSS file, typically like this:
    <link href="/path/to/your/tailwind.css" rel="stylesheet">
    -->
-   <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 dark:bg-gray-900">
-
 <nav class="bg-blue-700 dark:bg-blue-800">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-    <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <span class="self-center text-2xl font-semibold whitespace-nowrap text-white dark:text-white">Windows Security</span>
-    </a>
-    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-200 rounded-lg md:hidden hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-gray-400 dark:text-gray-300 dark:hover:bg-blue-700 dark:focus:ring-gray-500" aria-controls="navbar-default" aria-expanded="false">
-        <span class="sr-only">Open main menu</span>
-        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-        </svg>
-    </button>
-    <div class="hidden w-full md:flex md:w-auto items-center" id="navbar-default">
-      <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-blue-600 rounded-lg bg-blue-700 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-blue-700 dark:bg-blue-800 md:dark:bg-blue-800 dark:border-blue-700">
-        <li>
-          <a href="index.html" class="flex items-center justify-between w-full py-2 px-3 text-white rounded hover:bg-blue-600 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0 dark:text-white md:dark:hover:text-blue-400 dark:hover:bg-blue-700 dark:hover:text-white md:dark:hover:bg-transparent">
-            <svg class="inline-block w-5 h-5 mr-1 align-text-bottom" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" /><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></svg>
+<div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+<a class="flex items-center space-x-3 rtl:space-x-reverse" href="index.html">
+<span class="self-center text-2xl font-semibold whitespace-nowrap text-white dark:text-white">Windows Security</span>
+</a>
+<button aria-controls="navbar-default" aria-expanded="false" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-200 rounded-lg md:hidden hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-gray-400 dark:text-gray-300 dark:hover:bg-blue-700 dark:focus:ring-gray-500" data-collapse-toggle="navbar-default" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="w-5 h-5" fill="none" viewbox="0 0 17 14" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1h15M1 7h15M1 13h15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<div class="hidden w-full md:flex md:w-auto items-center" id="navbar-default">
+<ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-blue-600 rounded-lg bg-blue-700 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-blue-700 dark:bg-blue-800 md:dark:bg-blue-800 dark:border-blue-700">
+<li>
+<a class="flex items-center justify-between w-full py-2 px-3 text-white rounded hover:bg-blue-600 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0 dark:text-white md:dark:hover:text-blue-400 dark:hover:bg-blue-700 dark:hover:text-white md:dark:hover:bg-transparent" href="index.html">
+<svg class="inline-block w-5 h-5 mr-1 align-text-bottom" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
             Home
           </a>
-        </li>
-        <li>
-          <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-white rounded hover:bg-blue-600 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0 dark:text-white md:dark:hover:text-blue-400 dark:hover:bg-blue-700 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="page">
+</li>
+<li>
+<button aria-current="page" class="flex items-center justify-between w-full py-2 px-3 text-white rounded hover:bg-blue-600 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0 dark:text-white md:dark:hover:text-blue-400 dark:hover:bg-blue-700 dark:hover:text-white md:dark:hover:bg-transparent" data-dropdown-toggle="dropdownNavbar" id="dropdownNavbarLink">
             Security Categories
-            <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-            </svg>
-          </button>
-          <!-- Dropdown menu -->
-          <div id="dropdownNavbar" class="z-10 hidden font-normal bg-blue-50 divide-y divide-blue-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-              <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownLargeButton">
-                <li><a href="cloud_services.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-600 dark:hover:text-white">Cloud Services</a></li>
-                <li><a href="identity.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-600 dark:hover:text-white">Identity</a></li>
-                <li><a href="application.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-600 dark:hover:text-white">Application</a></li>
-                <li><a href="operating_system.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-600 dark:hover:text-white">Operating System</a></li>
-                <li><a href="hardware.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-600 dark:hover:text-white text-orange-500 dark:text-orange-400" aria-current="page">Hardware</a></li>
-                <li><a href="security_foundation.html" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-600 dark:hover:text-white">Security Foundation</a></li>
-              </ul>
-          </div>
-        </li>
-        <li>
-          <a href="timeline.html" class="flex items-center justify-between w-full py-2 px-3 text-white rounded hover:bg-blue-600 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0 dark:text-white md:dark:hover:text-blue-400 dark:hover:bg-blue-700 dark:hover:text-white md:dark:hover:bg-transparent">Timeline</a>
-        </li>
-        <li>
-          <a href="resources.html" class="flex items-center justify-between w-full py-2 px-3 text-white rounded hover:bg-blue-600 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0 dark:text-white md:dark:hover:text-blue-400 dark:hover:bg-blue-700 dark:hover:text-white md:dark:hover:bg-transparent">Resources</a>
-        </li>
-      </ul>
-    </div>
-  </div>
+            <svg aria-hidden="true" class="w-2.5 h-2.5 ms-2.5" fill="none" viewbox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
+<path d="m1 1 4 4 4-4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<!-- Dropdown menu -->
+<div class="z-10 hidden font-normal bg-blue-50 divide-y divide-blue-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600" id="dropdownNavbar">
+<ul aria-labelledby="dropdownLargeButton" class="py-2 text-sm text-gray-700 dark:text-gray-200">
+<li><a class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-600 dark:hover:text-white" href="cloud_services.html">Cloud Services</a></li>
+<li><a class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-600 dark:hover:text-white" href="identity.html">Identity</a></li>
+<li><a class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-600 dark:hover:text-white" href="application.html">Application</a></li>
+<li><a class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-600 dark:hover:text-white" href="operating_system.html">Operating System</a></li>
+<li><a aria-current="page" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-600 dark:hover:text-white text-orange-500 dark:text-orange-400" href="hardware.html">Hardware</a></li>
+<li><a class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-600 dark:hover:text-white" href="security_foundation.html">Security Foundation</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a class="flex items-center justify-between w-full py-2 px-3 text-white rounded hover:bg-blue-600 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0 dark:text-white md:dark:hover:text-blue-400 dark:hover:bg-blue-700 dark:hover:text-white md:dark:hover:bg-transparent" href="timeline.html">Timeline</a>
+</li>
+<li>
+<a class="flex items-center justify-between w-full py-2 px-3 text-white rounded hover:bg-blue-600 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0 dark:text-white md:dark:hover:text-blue-400 dark:hover:bg-blue-700 dark:hover:text-white md:dark:hover:bg-transparent" href="resources.html">Resources</a>
+</li>
+</ul>
+</div>
+</div>
 </nav>
-  <div class="container mx-auto max-w-4xl p-6">
-    <nav class="text-sm mb-4" aria-label="Breadcrumb">
-      <ol class="list-none p-0 inline-flex">
-        <li class="flex items-center">
-          <a href="index.html" class="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-500 font-medium">Home</a>
-          <svg class="fill-current w-3 h-3 mx-3 text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"/></svg>
-        </li>
-        <li class="flex items-center">
-          <span class="text-gray-600 dark:text-gray-400 font-medium">Hardware Security</span>
-        </li>
-      </ol>
-    </nav>
-    <main>
-      <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white mb-4">Hardware Security</h1>
-      <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">Explore the various topics related to Hardware Security:</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+<div class="container mx-auto max-w-4xl p-6">
+<nav aria-label="Breadcrumb" class="text-sm mb-4">
+<ol class="list-none p-0 inline-flex">
+<li class="flex items-center">
+<a class="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-500 font-medium" href="index.html">Home</a>
+<svg class="fill-current w-3 h-3 mx-3 text-gray-500 dark:text-gray-400" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+</li>
+<li class="flex items-center">
+<span class="text-gray-600 dark:text-gray-400 font-medium">Hardware Security</span>
+</li>
+</ol>
+</nav>
+<main>
+<h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white mb-4">Hardware Security</h1>
+<p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">Explore the various topics related to Hardware Security:</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+<div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
+<h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Configuration Lock</h2>
+<p class="post-preview-text text-gray-600 dark:text-gray-400 text-sm mt-1">Preview loading...</p>
+<a class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm" href="post_template.html?post=configuration_lock">Read more... (Content Coming Soon)</a>
+</div>
 
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
-          <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Configuration Lock</h2>
-          <p class="post-preview-text text-gray-600 dark:text-gray-400 text-sm mt-1">Preview loading...</p>
-          <a href="post_template.html?post=configuration_lock" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
-        </div>
+<div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
+<h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Hardware Enforced Stack Protection</h2>
+<p class="post-preview-text text-gray-600 dark:text-gray-400 text-sm mt-1">Preview loading...</p>
+<a class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm" href="post_template.html?post=hardware_enforced_stack_protection">Read more... (Content Coming Soon)</a>
+</div>
 
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
-          <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Direct Memory Access (DMA) Protection</h2>
-          <p class="post-preview-text text-gray-600 dark:text-gray-400 text-sm mt-1">Preview loading...</p>
-          <a href="post_template.html?post=direct_memory_access_protection" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
-        </div>
 
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
-          <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Hardware Enforced Stack Protection</h2>
-          <p class="post-preview-text text-gray-600 dark:text-gray-400 text-sm mt-1">Preview loading...</p>
-          <a href="post_template.html?post=hardware_enforced_stack_protection" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
-        </div>
+<div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
+<h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Kernel Data Memory Entropy DMA Protection</h2>
+<p class="post-preview-text text-gray-600 dark:text-gray-400 text-sm mt-1">Preview loading...</p>
+<a class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm" href="post_template.html?post=kernel_data_memory_entropy_dma_protection">Read more... (Content Coming Soon)</a>
+</div>
+<div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
+<h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Microsoft Secure Process Protections</h2>
+<p class="post-preview-text text-gray-600 dark:text-gray-400 text-sm mt-1">Preview loading...</p>
+<a class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm" href="post_template.html?post=microsoft_secure_process_protections">Read more... (Content Coming Soon)</a>
+</div>
+<div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
+<h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Secure Boot</h2>
+<p class="post-preview-text text-gray-600 dark:text-gray-400 text-sm mt-1">Preview loading...</p>
+<a class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm" href="post_template.html?post=secure_boot">Read more... (Content Coming Soon)</a>
+</div>
 
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
-          <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Hypervisor Enforced Bug Reporting (HEBR)</h2>
-          <p class="post-preview-text text-gray-600 dark:text-gray-400 text-sm mt-1">Preview loading...</p>
-          <a href="post_template.html?post=hypervisor_enforced_bug_reporting" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
-        </div>
 
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
-          <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Hypervisor Protected Code Integrity (HVCI)</h2>
-          <p class="post-preview-text text-gray-600 dark:text-gray-400 text-sm mt-1">Preview loading...</p>
-          <a href="post_template.html?post=hypervisor_protected_code_integrity" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
-        </div>
-
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
-          <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Kernel Data Memory Entropy DMA Protection</h2>
-          <p class="post-preview-text text-gray-600 dark:text-gray-400 text-sm mt-1">Preview loading...</p>
-          <a href="post_template.html?post=kernel_data_memory_entropy_dma_protection" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
-        </div>
-
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
-          <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Microsoft Secure Process Protections</h2>
-          <p class="post-preview-text text-gray-600 dark:text-gray-400 text-sm mt-1">Preview loading...</p>
-          <a href="post_template.html?post=microsoft_secure_process_protections" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
-        </div>
-
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
-          <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Secure Boot</h2>
-          <p class="post-preview-text text-gray-600 dark:text-gray-400 text-sm mt-1">Preview loading...</p>
-          <a href="post_template.html?post=secure_boot" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
-        </div>
-
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
-          <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Trusted Platform Module (TPM) 2.0</h2>
-          <p class="post-preview-text text-gray-600 dark:text-gray-400 text-sm mt-1">Preview loading...</p>
-          <a href="post_template.html?post=trusted_platform_module_2_0" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
-        </div>
-
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 ease-in-out border border-gray-200 dark:border-gray-700">
-          <h2 class="font-semibold text-xl text-blue-600 dark:text-blue-400 mb-2">Virtualization Based Security (VBS)</h2>
-          <p class="post-preview-text text-gray-600 dark:text-gray-400 text-sm mt-1">Preview loading...</p>
-          <a href="post_template.html?post=virtualization_based_security" class="text-orange-500 dark:text-orange-400 hover:underline font-medium text-sm">Read more... (Content Coming Soon)</a>
-        </div>
-
-      </div>
-    </main>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script>
+</div>
+</main>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
     function loadPostPreviews() {
       const postContainers = document.querySelectorAll('.grid > div.bg-white');
       postContainers.forEach(container => {
@@ -202,7 +171,7 @@
 
     document.addEventListener('DOMContentLoaded', loadPostPreviews);
   </script>
-  <script src="js/ai-reminder.js" defer></script>
-  <script src="js/google-analytics.js" defer></script>
+<script defer="" src="js/ai-reminder.js"></script>
+<script defer="" src="js/google-analytics.js"></script>
 </body>
 </html>
